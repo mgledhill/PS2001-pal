@@ -1,0 +1,59 @@
+/* PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+Title :          WEBSITE FONTS (SIEMENS FONTS)                    TIA-FONTS.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+1. SIEMENS TIA PORTAL BASIC FONTS
+The following file loads the Siemens TIA Portal Basic fonts
+
+
+2. NAMING CONVENTIONS
+The following fonts have been converted to webfonts and are loaded by this
+file:
+
+                                        Shorthand name
+    Font name           Type           (within website)
+---------------------------------------------------------------------
+    Siemens TAI Protal  Regular         stia-r
+    Siemens TAI Protal  Bold            stia-b
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue    Author         Reason for Modification
+-------------------------------------------------------------------------------
+18 Sep 2018   D01      M. Gledhill    Created
+
+
+-----------------------------------------------------------------------------*/
+
+
+/* ****************************************************************************
+   Siemes TIA Portal Basic fonts
+   ************************************************************************* */
+
+@font-face {                    /* Siemens TIA Portal font - regular */
+    font-family: 'stia-r.woff';
+    src: url(woff/stia-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Siemens TIA Portal font - bold */
+    font-family: 'stia-b.woff';
+    src: url(woff/stia-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

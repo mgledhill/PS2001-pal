@@ -1,0 +1,1180 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2018
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="HTML Template for user-defined documents that can be incorporated into a Siemens TIA Portal projet">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          TIA PORTAL USER DOCUMENT TEMPLATE                    HOMR.HTML
+*******************************************************************************
+DETAILS
+
+This is a practical HTML template that can be used to store user-defined
+documents within the folder structure of TIA Portal projects.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+12 May 2018   D00          M. Gledhill    Development - based on PS1002 R01
+*************************************************************************** -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="ud-html/11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png"            href="ud-html/11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png"            href="ud-html/11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest"                         href="ud-html/11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon"                        href="ud-html/11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="ud-html/21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)            <script type="text/javascript" src="ud-html/21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
+        <!-- Prettify (Language)        <script type="text/javascript" src="ud-html/21-global/05-js/lang-css.js" defer></script> -->
+        <!-- Hyphenator -->             <script type="text/javascript" src="ud-html/21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax                    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
+
+        <!-- PS main script -->         <script type="text/javascript" src="ud-html/11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="ud-html/01-pages/home/05-local-js/scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="ud-html/21-global/03-fonts/ps-fonts.css">
+        <!-- Load TAI fonts -->         <link rel="stylesheet" type="text/css" href="ud-html/21-global/03-fonts/tia-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="ud-html/21-global/01-css/normalise.css">
+        <!-- Prettify styles            <link rel="stylesheet" type="text/css" href="ud-html/11-resources/01-css/prettify.css"> -->
+        <!-- Lightbox styles            <link rel="stylesheet" type="text/css" href="ud-html/21-global/01-css/lightbox.css">  -->
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="ud-html/21-global/01-css/ionicons.min.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="ud-html/11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="ud-html/11-resources/01-css/style.css">
+
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>EPL User Documentation | Home Page</title>
+    </head>
+
+
+    <body>
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav class="nav-cover">                             <!-- Start of top navigation bar (set transparent on cover page) -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <div class="nav-wide-blank" ></div>
+                        <!-- Button 02 - Previous Chapter -->
+                        <div class="nav-wide-blank" ></div>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home js--sc-000000" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="01-00-introduction.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="01-00-introduction.html#js--010000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000002]
+     COVER IMAGE
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of cover row -->
+                <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 1.6rem;">            <!-- Start of left side bar -->
+                        <img src="ud-html/11-resources/02-images/02-build-status/build-badge.svg" alt="Build info">          <!-- Build status -->
+                    </aside>                                    <!-- End of right side bar   -->
+
+                </div>           <!-- End of Left column -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of Cover area (centre column) -->
+                    <div class="cover-overline"></div>          <!-- Overline bar -->
+                    <div class="cover-title">                   <!-- Start of cover title area -->
+                        <h1>Practical Series</h1>               <!-- Main title -->
+                        <h2>Practical Series Automation Library</h2>              <!-- Subtitle -->
+                        <h3>by Michael Gledhill</h3>            <!-- Author -->
+                    </div>                                      <!-- End of cover title area -->
+                    <figure class="cover-fig">                  <!-- Start of cover figure -->
+                        <img src="ud-html/11-resources/02-images/pal-logo-full.svg" alt="cover logo">
+                    </figure>                                   <!-- End of cover figure -->
+                </div>                                          <!-- End of cover area (centre column -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column  -->
+                    <aside class="aside-right-rev" style="margin-top: 1.6rem">             <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 2001:&nbsp;&mdash;&nbsp;D00</p>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column  -->
+            </div>                                              <!-- End of cover row -->
+
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - PRACTICAL SERIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a href="http://practicalseries.com/">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num"></span><span class="toc-lev1-text">Practical Series Publications &mdash; Home Page</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - A NOTE BY THE AUTHOR
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-000100" href="index.html#js--000100">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1lt-num"></span><span class="toc-lev1lt-text">A note by the author</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 1. introduction
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-010000" href="01-00-introduction.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">1</span><span class="toc-lev1-text">Introduction</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-010100" href="01-01-howtouse.html#js--010100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.1</span><span class="toc-lev3-text">How to use this website</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-010200" href="01-02-paying.html#js--010200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.2</span><span class="toc-lev3-text">How to pay for this website</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 2 Git, the concept
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-020000" href="02-00-concept.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">2</span><span class="toc-lev1-text">Git, the concept</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-020100" href="02-01-concept.html#js--020100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.1</span><span class="toc-lev2-text">What is version control?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020101" href="02-01-concept.html#js--020101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.1.1</span><span class="toc-lev3-text">Why use version control</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-020200" href="02-02-concept.html#js--020200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.2</span><span class="toc-lev2-text">Version control with Git</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020201" href="02-02-concept.html#js--020201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.1</span><span class="toc-lev3-text">The local repository&mdash;how it works</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020202" href="02-02-concept.html#js--020202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.2</span><span class="toc-lev3-text">Commit version numbers</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020203" href="02-02-concept.html#js--020203">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.3</span><span class="toc-lev3-text">How to view commits</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020204" href="02-02-concept.html#js--020204">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.4</span><span class="toc-lev3-text">Committing changes&mdash;best practice</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-020300" href="02-03-concept.html#js--020300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.3</span><span class="toc-lev2-text">Branching</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020301" href="02-03-concept.html#js--020301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.3.1</span><span class="toc-lev3-text"> Switch branches&mdash;what happens</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020302" href="02-03-concept.html#js--020302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.3.2</span><span class="toc-lev3-text">Branches with uncommitted changes</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-020400" href="02-04-concept.html#js--020400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.4</span><span class="toc-lev2-text">More branches and merging</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020401" href="02-04-concept.html#js--020401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.4.1</span><span class="toc-lev3-text">Conflict when merging</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020402" href="02-04-concept.html#js--020402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.4.2</span><span class="toc-lev3-text">Branches and work flow&mdash;best practice</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-020500" href="02-05-concept.html#js--020500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.5</span><span class="toc-lev2-text">Resetting to an older commit point</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020501" href="02-05-concept.html#js--020501">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.5.1</span><span class="toc-lev3-text">A project to explain the reset</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020502" href="02-05-concept.html#js--020502">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.5.2</span><span class="toc-lev3-text">A hard reset</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020503" href="02-05-concept.html#js--020503">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.5.3</span><span class="toc-lev3-text">Making changes after a reset</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020504" href="02-05-concept.html#js--020504">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.5.4</span><span class="toc-lev3-text">Using resets&mdash;best practice</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020505" href="02-05-concept.html#js--020505">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.5.5</span><span class="toc-lev3-text">A mixed reset</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020506" href="02-05-concept.html#js--020506">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.5.6</span><span class="toc-lev3-text">A soft reset</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020507" href="02-05-concept.html#js--020507">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.5.7</span><span class="toc-lev3-text">Reset, a summary</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-020600" href="02-06-concept.html#js--020600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.6</span><span class="toc-lev2-text">Tagging</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020601" href="02-06-concept.html#js--020601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.6.1</span><span class="toc-lev3-text">Lightweight tags</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020602" href="02-06-concept.html#js--020602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.6.2</span><span class="toc-lev3-text">Annotated tags</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020603" href="02-06-concept.html#js--020603">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.6.3</span><span class="toc-lev3-text">Using tags</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020604" href="02-06-concept.html#js--020604">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.6.4</span><span class="toc-lev3-text">Tag naming restrictions</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-020700" href="02-07-concept.html#js--020700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.7</span><span class="toc-lev2-text">Ignoring files with <span class="code">.gitignore</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-020800" href="02-08-concept.html#js--020800">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.8</span><span class="toc-lev2-text">The remote repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020801" href="02-08-concept.html#js--020801">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.8.1</span><span class="toc-lev3-text">Local and remote repositories</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020802" href="02-08-concept.html#js--020802">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.8.2</span><span class="toc-lev3-text">Where does a remote repository live?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-020900" href="02-09-concept.html#js--020900">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.9</span><span class="toc-lev2-text">Moving data between repositories</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020901" href="02-09-concept.html#js--020901">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.9.1</span><span class="toc-lev3-text">Sending data to a remote repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020902" href="02-09-concept.html#js--020902">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.9.2</span><span class="toc-lev3-text">Getting data from a remote repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020903" href="02-09-concept.html#js--020903">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.9.3</span><span class="toc-lev3-text">What happens if there is a conflict </span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020904" href="02-09-concept.html#js--020904">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.9.4</span><span class="toc-lev3-text">Creating a local repository from an existing remote</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020905" href="02-09-concept.html#js--020905">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.9.5</span><span class="toc-lev3-text">A note on remote connection names</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020906" href="02-09-concept.html#js--020906">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.9.6</span><span class="toc-lev3-text">Working with remotes&mdash;best practice</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 3 Installing Git
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-030000" href="03-00-install.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">3</span><span class="toc-lev1-text">Installing Git</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-030100" href="03-01-install.html#js--030100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.1</span><span class="toc-lev2-text">Downloading and installing Git</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-030200" href="03-02-install.html#js--030200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.2</span><span class="toc-lev2-text">Downloading everything else</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030201" href="03-02-install.html#js--030201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.1</span><span class="toc-lev3-text">A default text editor for Git</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030202" href="03-02-install.html#js--030202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.2</span><span class="toc-lev3-text">A difference and merge tool</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-030300" href="03-03-install.html#js--030300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.3</span><span class="toc-lev2-text">Changing the Git default locations</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030301" href="03-03-install.html#js--030301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.3.1</span><span class="toc-lev3-text">Changing the default directories</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-030400" href="03-04-install.html#js--030400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.4</span><span class="toc-lev2-text">Changing the Git default settings</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030401" href="03-04-install.html#js--030401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.4.1</span><span class="toc-lev3-text">Configuring a Username and email</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030402" href="03-04-install.html#js--030402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.4.2</span><span class="toc-lev3-text">Configuring a default text editor</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030403" href="03-04-install.html#js--030403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.4.3</span><span class="toc-lev3-text">Configuring a default difference tool</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030404" href="03-04-install.html#js--030404">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.4.4</span><span class="toc-lev3-text">Configuring a default merge tool</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030405" href="03-04-install.html#js--030405">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.4.5</span><span class="toc-lev3-text">Defining an alias</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 4 GitHub and SSH Linking
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-040000" href="04-00-linking.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">4</span><span class="toc-lev1-text">GitHub and SSH Linking</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-040100" href="04-01-linking.html#js--040100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.1</span><span class="toc-lev2-text">Creating a GitHub account</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-040200" href="04-02-linking.html#js--040200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.2</span><span class="toc-lev2-text">Creating a first GitHub repository</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-040300" href="04-03-linking.html#js--040300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.3</span><span class="toc-lev2-text">Creating an SSH key</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040301" href="04-03-linking.html#js--040301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.3.1</span><span class="toc-lev3-text">Creating an SSH key pair</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040302" href="04-03-linking.html#js--040302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.3.2</span><span class="toc-lev3-text">Adding the public key to GitHub</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040303" href="04-03-linking.html#js--040303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.3.3</span><span class="toc-lev3-text">Testing the SSH connection</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 5 Git inside Brackets
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-050000" href="05-00-brackets.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">5</span><span class="toc-lev1-text">Git inside Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-050100" href="05-01-brackets.html#js--050100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.1</span><span class="toc-lev2-text">Installing Brackets-Git</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-050200" href="05-02-brackets.html#js--050200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.2</span><span class="toc-lev2-text">Making an empty GitHub repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050201" href="05-02-brackets.html#js--050201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.2.1</span><span class="toc-lev3-text">Create a new repository using GitHub</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-050300" href="05-03-brackets.html#js--050300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.3</span><span class="toc-lev2-text">Cloning the GitHub repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-050400" href="05-04-brackets.html#js--050400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.4</span><span class="toc-lev2-text">Managing a repository with Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050401" href="05-04-brackets.html#js--050401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.4.1</span><span class="toc-lev3-text">Creating a new folder in the repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050402" href="05-04-brackets.html#js--050402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.4.2</span><span class="toc-lev3-text">Modifying a file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050403" href="05-04-brackets.html#js--050403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.4.3</span><span class="toc-lev3-text">Committing the changes</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050404" href="05-04-brackets.html#js--050404">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.4.4</span><span class="toc-lev3-text">Pushing the changes back to GitHub</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 6 GIT AND BRACKETS A WORKED EXAMPLE
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-060000" href="06-00-example.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">6</span><span class="toc-lev1-text">Git &amp; Brackets a worked example</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-060100" href="06-01-example.html#js--060100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.1</span><span class="toc-lev2-text">Creating the local repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-060200" href="06-02-example.html#js--060200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.2</span><span class="toc-lev2-text">Creating the folders  and initial files</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060201" href="06-02-example.html#js--060201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.1</span><span class="toc-lev3-text">The <span class="code">.gitignore</span> file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060202" href="06-02-example.html#js--060202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.2</span><span class="toc-lev3-text">Creating a folder structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060203" href="06-02-example.html#js--060203">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.3</span><span class="toc-lev3-text">Adding images to the project</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060204" href="06-02-example.html#js--060204">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.4</span><span class="toc-lev3-text">The <span class="code">README.md</span> file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060205" href="06-02-example.html#js--060205">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.5</span><span class="toc-lev3-text">The <span class="code">index.html</span> file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060206" href="06-02-example.html#js--060206">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.6</span><span class="toc-lev3-text">The <span class="code">style.css</span> file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-060300" href="06-03-example.html#js--060300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.3</span><span class="toc-lev2-text">The first commit</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060301" href="06-03-example.html#js--060301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.3.1</span><span class="toc-lev3-text">Staging the files</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060302" href="06-03-example.html#js--060302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.3.2</span><span class="toc-lev3-text">Making the first commit</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060303" href="06-03-example.html#js--060303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.3.3</span><span class="toc-lev3-text">Viewing the commit history</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060304" href="06-03-example.html#js--060304">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.3.4</span><span class="toc-lev3-text">Tagging the commit</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060305" href="06-03-example.html#js--060305">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.3.5</span><span class="toc-lev3-text">The current workflow</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-060400" href="06-04-example.html#js--060400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.4</span><span class="toc-lev2-text">Adding another commit</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060401" href="06-04-example.html#js--060401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.4.1</span><span class="toc-lev3-text">Viewing the file history</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060402" href="06-04-example.html#js--060402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.4.2</span><span class="toc-lev3-text">Viewing the contents of a file at a previous commit</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-060500" href="06-05-example.html#js--060500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.5</span><span class="toc-lev2-text">Branches</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060501" href="06-05-example.html#js--060501">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.5.1</span><span class="toc-lev3-text">Adding a branch in Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060502" href="06-05-example.html#js--060502">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.5.2</span><span class="toc-lev3-text">Making a commit on a new branch</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-060600" href="06-06-example.html#js--060600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.6</span><span class="toc-lev2-text">Switching branches</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060601" href="06-06-example.html#js--060601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Switching branches with uncommitted changes</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060602" href="06-06-example.html#js--060602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.2</span><span class="toc-lev3-text">Discarding the latest changes</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-060700" href="06-07-example.html#js--060700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.7</span><span class="toc-lev2-text">Merging, conflicts and deleting branches</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060701" href="06-07-example.html#js--060701">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.7.1</span><span class="toc-lev3-text">Merging a branch with Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060702" href="06-07-example.html#js--060702">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.7.2</span><span class="toc-lev3-text">Deleting a branch with Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060703" href="06-07-example.html#js--060703">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.7.3</span><span class="toc-lev3-text">Merging a branch with a Conflict</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 7 Regression with Brackets
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-070000" href="07-00-regression.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">7</span><span class="toc-lev1-text">Regression with Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-070100" href="07-01-regression.html#js--070100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.1</span><span class="toc-lev2-text">Enabling reset and checkout </span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070201" href="07-01-regression.html#js--070101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.1.1</span><span class="toc-lev3-text">Date and time settings</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-070200" href="07-02-regression.html#js--070200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.2</span><span class="toc-lev2-text">Regressing a with Reset</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070201" href="07-02-regression.html#js--070201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.2.1</span><span class="toc-lev3-text">Resetting to an earlier commit point</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-070300" href="07-03-regression.html#js--070300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.3</span><span class="toc-lev2-text">Regressing with Checkout</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 8 remotes with Brackets
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-080000" href="08-00-remotes.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">8</span><span class="toc-lev1-text">Brackets and remote repositories</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-080100" href="08-01-remotes.html#js--080100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.1</span><span class="toc-lev2-text">Extending the current project</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-080200" href="08-02-remotes.html#js--080200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.2</span><span class="toc-lev2-text">Creating the remote repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-080300" href="08-03-remotes.html#js--080300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.3</span><span class="toc-lev2-text">Pushing a local repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080301" href="08-03-remotes.html#js--080301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.1</span><span class="toc-lev3-text">Linking Brackets to the remote repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080302" href="08-03-remotes.html#js--080302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.2</span><span class="toc-lev3-text">Pushing the local repository to the remote repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080303" href="08-03-remotes.html#js--080303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.3</span><span class="toc-lev3-text">Pushing another branch to the remote</span></div></a>
+                        </li>                         <!-- TOC link end   -->
+
+                        <li><a class="js--sc-080400" href="08-04-remotes.html#js--080400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.4</span><span class="toc-lev2-text">Pulling remote changes into the local repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-080500" href="08-05-remotes.html#js--080500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.5</span><span class="toc-lev2-text">Conflicts between local and remote repositories</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-080600" href="08-06-remotes.html#js--080600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.6</span><span class="toc-lev2-text">Deleting remote branches</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080601" href="08-06-remotes.html#js--080601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.6.1</span><span class="toc-lev3-text">Deleting the remote branch.</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080602" href="08-06-remotes.html#js--080602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.6.2</span><span class="toc-lev3-text">Deleting the local branch</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 9 github
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-090000" href="09-00-github.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">9</span><span class="toc-lev1-text">GitHub</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-090100" href="09-01-github.html#js--090100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.1</span><span class="toc-lev2-text">GitHub&mdash;the basic pages</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090101" href="09-01-github.html#js--090101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.1</span><span class="toc-lev3-text">GitHub profile&mdash;newsfeed page</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090102" href="09-01-github.html#js--090102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.2</span><span class="toc-lev3-text">A repository home page</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-090200" href="09-02-github.html#js--090200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.2</span><span class="toc-lev2-text">GitHub&mdash;finding and viewing files</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090201" href="09-02-github.html#js--090201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.2.1</span><span class="toc-lev3-text">File view</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090202" href="09-02-github.html#js--090202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.2.2</span><span class="toc-lev3-text">Viewing the contents of a file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090203" href="09-02-github.html#js--090203">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.2.3</span><span class="toc-lev3-text">Viewing other types of files</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-090300" href="09-03-github.html#js--090300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.3</span><span class="toc-lev2-text">GitHub&mdash;file handling</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090301" href="09-03-github.html#js--090301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.1</span><span class="toc-lev3-text">Creating new folders and files</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090302" href="09-03-github.html#js--090302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.2</span><span class="toc-lev3-text">Committing files</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090303" href="09-03-github.html#js--090303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.3</span><span class="toc-lev3-text">Uploading a file</span></div></a>
+                        </li>                         <!-- TOC link end   -->
+                        <li><a class="js--sc-090304" href="09-03-github.html#js--090304">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.4</span><span class="toc-lev3-text">Editing a file</span></div></a>
+                        </li>                         <!-- TOC link end   -->
+                        <li><a class="js--sc-090305" href="09-03-github.html#js--090305">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.5</span><span class="toc-lev3-text">Renaming a file</span></div></a>
+                        </li>                         <!-- TOC link end   -->
+                        <li><a class="js--sc-090306" href="09-03-github.html#js--090306">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.6</span><span class="toc-lev3-text">Deleting a file</span></div></a>
+                        </li>                         <!-- TOC link end   -->
+
+                        <li><a class="js--sc-090400" href="09-04-github.html#js--090400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.4</span><span class="toc-lev2-text">GitHub&mdash;navigating commit points</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090401" href="09-04-github.html#js--090401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.1</span><span class="toc-lev3-text">The commit history</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090402" href="09-04-github.html#js--090402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.2</span><span class="toc-lev3-text">Recovering data from earlier commits</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-090500" href="09-05-github.html#js--090500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.5</span><span class="toc-lev2-text">GitHub&mdash;handling branches</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090501" href="09-05-github.html#js--090501">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.1</span><span class="toc-lev3-text">Creating a new branch</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090502" href="09-05-github.html#js--090502">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.2</span><span class="toc-lev3-text">Creating a file on the new branc</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090503" href="09-05-github.html#js--090503">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.3</span><span class="toc-lev3-text">Merging branches with a <span class="git-cmd">pull request</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090504" href="09-05-github.html#js--090504">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.4</span><span class="toc-lev3-text">Examining previous <span class="git-cmd">pull requests</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090505" href="09-05-github.html#js--090505">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.5</span><span class="toc-lev3-text"><span class="git-cmd">Pull request</span> merge with a conflict</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090506" href="09-05-github.html#js--090506">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.6</span><span class="toc-lev3-text">Deleting a branch</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-090600" href="09-06-github.html#js--090600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.6</span><span class="toc-lev2-text">GitHub&mdash;tags and releases</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090601" href="09-06-github.html#js--090601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.1</span><span class="toc-lev3-text">Tags and releases&mdash;the differences</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090602" href="09-06-github.html#js--090602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.2</span><span class="toc-lev3-text">Viewing releases (and tags)</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090603" href="09-06-github.html#js--090603">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.3</span><span class="toc-lev3-text">Creating a release</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090604" href="09-06-github.html#js--090604">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.4</span><span class="toc-lev3-text">Pulling releases back into Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 10 Collaborative working
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-100000" href="10-00-collaboration.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">10</span><span class="toc-lev1-text">Collaborative working</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-100100" href="10-01-collaboration.html#js--100100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.1</span><span class="toc-lev2-text">Forking</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100101" href="10-01-collaboration.html#js--100101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.1.1</span><span class="toc-lev3-text">Forking (copying) a repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100102" href="10-01-collaboration.html#js--100102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.1.2</span><span class="toc-lev3-text">Creating a <span class="menu">pull request</span> on a forked repository</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100103" href="10-01-collaboration.html#js--100103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.1.3</span><span class="toc-lev3-text">Synchronising a forked repository</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+
+                        <li><a class="js--sc-100200" href="10-02-collaboration.html#js--100200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.2</span><span class="toc-lev2-text">Issues and milestones</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100201" href="10-02-collaboration.html#js--100201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.2.1</span><span class="toc-lev3-text">Creating issue labels</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100202" href="10-02-collaboration.html#js--100202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.2.2</span><span class="toc-lev3-text">Creating milestones</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100203" href="10-02-collaboration.html#js--100203">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.2.3</span><span class="toc-lev3-text">Creating an issue</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100204" href="10-02-collaboration.html#js--100204">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.2.4</span><span class="toc-lev3-text">Closing an issue directly</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100205" href="10-02-collaboration.html#js--100205">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.2.5</span><span class="toc-lev3-text">Closing an issue from a commit</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+
+
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 80 And finally
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <a href="80-00-finally.html">       <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num"></span><span class="toc-lev1-text">And finally &hellip;</span></div>
+                            </a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-800100" href="80-00-finally.html#js--800100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Contact MG</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-800200" href="80-00-finally.html#js--800200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Acknowledgements</span></div></a>
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-800300" href="80-00-finally.html#js--800300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Colophon</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-800400" href="80-00-finally.html#js--800400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Legal</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 90 Appendices
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-100000" href="90-00-appendices.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num"></span><span class="toc-lev1-text">Appendices</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-90a0000" href="90a-00-appendices.html#js--90a0000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">A</span><span class="toc-lev1-text">Installing Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-90a0100" href="90a-00-appendices.html#js--90a0100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">A.1</span><span class="toc-lev2-text">The Brackets text editor</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90a0101" href="90a-00-appendices.html#js--90a0101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">A.1.1</span><span class="toc-lev3-text">Installing Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90a0200" href="90a-00-appendices.html#js--90a0200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">A.2</span><span class="toc-lev2-text">The Brackets text editor</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+
+
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-90b0000" href="90b-00-appendices.html#js--90b0000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">B</span><span class="toc-lev1-text">A revision numbering mechanism</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-90b0100" href="90b-00-appendices.html#js--90b0100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">B.1</span><span class="toc-lev2-text">Workflow arrangements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90b0200" href="90b-00-appendices.html#js--90b0200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">B.2</span><span class="toc-lev2-text">Master branch revisions</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90b0300" href="90b-00-appendices.html#js--90b0300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">B.3</span><span class="toc-lev2-text">Development revisions</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90b0400" href="90b-00-appendices.html#js--90b0400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">B.4</span><span class="toc-lev2-text">Parallel development </span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90b0500" href="90b-00-appendices.html#js--90b0500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">B.5</span><span class="toc-lev2-text">Nested development</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90b0600" href="90b-00-appendices.html#js--90b0600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">B.6</span><span class="toc-lev2-text">A note on numbering</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90b0700" href="90b-00-appendices.html#js--90b0700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">B.7</span><span class="toc-lev2-text">A note on commits</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-90c0000" href="90c-00-appendices.html#js--90c0000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">C</span><span class="toc-lev1-text">Markdown</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-90c0100" href="90c-00-appendices.html#js--90c0100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">C.1</span><span class="toc-lev2-text">General markdown syntax</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0101" href="90c-00-appendices.html#js--90c0101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.1.1</span><span class="toc-lev3-text">Headings</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0102" href="90c-00-appendices.html#js--90c0102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.1.2</span><span class="toc-lev3-text">Block quotes</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0103" href="90c-00-appendices.html#js--90c0103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.1.3</span><span class="toc-lev3-text">Emphasis</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0104" href="90c-00-appendices.html#js--90c0104">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.1.4</span><span class="toc-lev3-text">Ordered lists</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0105" href="90c-00-appendices.html#js--90c0105">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.1.5</span><span class="toc-lev3-text">Unordered lists</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0106" href="90c-00-appendices.html#js--90c0106">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.1.6</span><span class="toc-lev3-text">Combined lists</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0107" href="90c-00-appendices.html#js--90c0107">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.1.7</span><span class="toc-lev3-text">Images &amp; links</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0200" href="90c-00-appendices.html#js--90c0200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">C.2</span><span class="toc-lev2-text">Git flavoured syntax</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0201" href="90c-00-appendices.html#js--90c0201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.2.1</span><span class="toc-lev3-text">Code fragment</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0202" href="90c-00-appendices.html#js--90c0202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.2.2</span><span class="toc-lev3-text">Task lists</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0203" href="90c-00-appendices.html#js--90c0203">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.2.3</span><span class="toc-lev3-text">Tables</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0204" href="90c-00-appendices.html#js--90c0204">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.2.4</span><span class="toc-lev3-text">Special GitHub references </span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90c0205" href="90c-00-appendices.html#js--90c0205">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">C.2.5</span><span class="toc-lev3-text">Escape characters</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-90d0000" href="90d-00-appendices.html#js--90d0000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">D</span><span class="toc-lev1-text">Git and the Command Line</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-90d0100" href="90d-00-appendices.html#js--90d0100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">D.1</span><span class="toc-lev2-text">Git command line summary</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90d0200" href="90d-00-appendices.html#js--90d0200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">D.2</span><span class="toc-lev2-text">Git Bash summary</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-90e0000" href="90e-00-appendices.html#js--90e0000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">E</span><span class="toc-lev1-text">Git&mdash;Advanced topics</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-90e0100" href="90e-00-appendices.html#js--90e0100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">E.1</span><span class="toc-lev2-text">Rebase</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90e0101" href="90e-00-appendices.html#js--90e0101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">E.1.1</span><span class="toc-lev3-text">Rebase&mdash;the rules</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-90e0102" href="90e-00-appendices.html#js--90e0102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">E.1.2</span><span class="toc-lev3-text">Understanding rebase</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 000100]
+     SECTION START - AUTHOR'S NOTE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--000100">                     <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heaing) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-thinline"></div>      <!-- Thin overline (after TOC) -->
+                    <div class="sub-title-num-box"><h6>Placeholder</h6></div>   <!-- Heading 6 is a placehoder heading needed in sections without a heading to satisfy html validation -->
+                <!--     <div class="sub-title-text-box"><h2>Text</h2></div> -->
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-head">                  <!-- Start of left side bar   -->
+                        <h2>a note by the author</h2>           <!-- Side bar content         -->
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp"><span class="all-caps">This is my second</span> Practical Series publication&mdash;this one happened by accident too. The first publication is all about building a website, you can see it <a class="hlink nohyp" href="http://practicalseries.com/1001-webdevelopment/index.html">here</a>. This publication came about because I wanted some sort of version control mechanism for the first publication.</p>
+
+                    <p class="hyp">There are lots of different <span class="first-use">version control systems</span> (VCS) out there; some are free and some are commercial applications&mdash;just <a class="hlink nohyp" href="https://www.google.co.uk/search?q=version+control+system">google</a> it. If you do, you will find that Git and GitHub show up again and again.</p>
+
+                    <p class="hyp">I also noticed something as I wrote and developed my first publication and used various third party open source software and applications:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Unnumbered lists are an unordered list of class .list-no-num. The text of
+      each point must be contained in its own <p> element
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Normalise.css</p></li>
+
+                        <li><p class="hyp">Lightbox</p></li>
+
+                        <li><p class="hyp">MathJax</p></li>
+
+                        <li><p class="hyp">Prettify</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I noticed that all the people developing these applications did so by using GitHub&mdash;so, thought I, there must be something in it&mdash;<span class="first-use">best have a look and see what it&rsquo;s all about</span>.</p>
+
+                    <p class="hyp">So I did, and while GitHub and its poor provincial, command line cousin, Git are powerful version control applications, it&rsquo;s fair to say that they&rsquo;re also very difficult to understand.</p>
+
+                    <p class="hyp">I had a couple of goes at it and gave up each time&mdash;Git and GitHub have a pretty steep learning curve, especially Git (the application that runs on a local machine rather than GitHub that is web based). Git is driven through a command line terminal emulator and it&rsquo;s a bugger to use.</p>
+
+                    <p class="hyp">So I did a bit more digging and I found that the Brackets text editor, the one I use to develop the Practical Series websites, has an extension that provides a Git and GitHub interface directly within the Brackets development environment.</p>
+
+                    <p class="hyp">This extension (it&rsquo;s called <span class="first-use">Brackets-Git</span>) has the distinct advantage that it is easy to use and doesn&rsquo;t require command line inputs that are counter intuitive and hard to remember.</p>
+
+                    <p class="hyp">Git and GitHub, apart from having peculiar (and slightly rude sounding names), also have a wide range of in-house terminology and phrases, things like this:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Unnumbered lists are an unordered list of class .list-no-num. The text of
+      each point must be contained in its own <p> element
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Gist</p></li>
+
+                        <li><p class="hyp">Push</p></li>
+
+                        <li><p class="hyp">Repo</p></li>
+
+                        <li><p class="hyp">Fork</p></li>
+
+                        <li><p class="hyp">Pull request</p></li>
+
+                        <li><p class="hyp">Flirt</p></li>
+
+                        <li><p class="hyp">Flagellate</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+                    <p class="hyp">Ok, I made the last two up, but you wouldn&rsquo;t necessarily know. It is all very confusing and it&rsquo;s not that well explained.</p>
+
+                    <p class="hyp">It takes a long time to get to grips with Git&mdash;to such an extent that I had to make lots of notes, do a lot of reading around the subject, try a lot of different things and experiment with it until I had an understanding of what it all meant and how it worked.</p>
+
+                    <p class="no-hyp">And since I had written it all down, I thought it might be useful to other people&mdash;so I decided to publish it, and here it is.</p>
+
+                    <p class="hyp">Michael Gledhill<br>April 2017</p>
+
+                    <p> <br class="toc-pad"></p>
+                    <p> <br class="toc-pad"></p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--999901">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="ud-html/11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="01-00-introduction.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox                   <script type="text/javascript" src="ud-html/21-global/05-js/lightbox.js"></script> -->
+
+    </body>
+</html>

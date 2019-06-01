@@ -1,0 +1,675 @@
+
+
+/* PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+Title :          PRACTICAL SERIES AUTOMATION LIBRARY (PAL)            STYLE.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This is an additional style sheet for the PAL block header area, it provides
+additional styles for:
+
+        Cover features (titles & picture)
+        Header title bar
+
+The style sheet also contains responsive formatting for each of the areas
+(responsive settings are at the end of each section).
+
+This is one of a set of style sheets associated with the website, a full list
+of style sheets and the order in which they should be called is given here:
+
+        ps-fonts.css            - web fonts for the site
+        ps-googlefonts.css      - Google web fonts for downloadable version
+        normalise.css           - standardises the rendering of the site on
+                                  different browsers
+        prettify.css            - styles associated with google-code-prettify
+        lightbox.css            - styles associated with lightbox2 viewer
+        ionicons.min.css        - loads the ionicon social media fonts
+        grid.css                - defines a responsive grid (Kerstner grid)
+                                  for columns within the website
+        style.css               - this file
+        style-pal.css           - additional styles associated with the PAL
+
+-------------------------------------------------------------------------------
+COLOURS IN USE
+
+ Colour                 Usage                                    Hex Code
+----------------------+----------------------------------------+---------------
+ Page                 | Page colour outside 1276px boundary    | #fbfaf6
+ Page edge            | Border colour to page edge             | #ededed
+ Background           | Overall background colour (white)      | #fff
+ Main text            | main body text (v. dk gy)              | #404030
+ sidebar text         | Sidebar sans serif text (lt gy)        | #686868
+ sidebar border       | when collapsed (gy)                    | #cccccc
+ sidebar background   | when collapsed (lt gy)                 | #f8f8f8
+ Table border         | Outline for all tables                 | #cccccc
+ table background     | Incidental, code 7 formulae (lt gy)    | #fbfbfb
+ Navigation base      | Navigation (link/visited)              | #cccccc
+ Navigation hover     | Navigation (active/hover)              | #686868
+ Navigation bkgrd     | Navigation background (link/visited)   | #fff
+ Navigation bkgrd     | Navigation background (active/hover)   | #c8c8c8
+ TOC list             | Contents list of entries (blue)        | #4C6C9C
+ Footer background    | Footer area background (cream)         | #fbfaf6
+ Footer navigation    | Footer navigation & spacer text (blue) | #4c6c9c
+ Footer nav highlight | Footer nav highlights (lighter blue)   | #5b7daf
+ Button background    | Button light orange                    | #e67e22
+ Button hover         | Button dark orange (hover)             | #de7519
+ Text (red)           | Red text highlight                     | #c0504d
+ Untested link        | Highlights untested links              | #ff0000
+
+ git-cmd              | Blue colour used for Git commands      | #4F81BD
+ git-background       | Git command table background colour    | #404030
+
+ PAL logo main        | Main PAL logo colour (dk blue)         | #1F2D41
+ PAL logo PS          | PS colour in PAL logo colour (dk blue) | #4C6C9C
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+20 Sep 2018   D00          M. Gledhill    File created
+---------------------------------------------------------------------------- */
+
+/* ****************************************************************************
+   REVISION
+   **************************************************************************** */
+#rev-pal:after { content: "D00.01"; }
+
+/* ****************************************************************************
+   PAL LOGO & HEADLINE TITLES
+   ****************************************************************************
+   On the site Home page, the navigation & title bars are missing, and a
+   cover image and titles are inserted in their place.
+
+   This is the first area a visitor to the site sees.
+   ************************************************************************* */
+
+.pal-title-row {                                /* container for whole row */
+ /*   margin-top: 3rem;*/
+    z-index: 1;
+}
+
+.pal-headline {
+    font-family: "conc-c8-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    color: #1F2D41;
+    font-size: 150%;
+}
+.pal-headline h1 {                           /* format h1 - MAIN TITLE */
+    font-family: "conc-c2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 107.5%;
+    margin-top: 0.85rem;
+}
+.pal-headline-ps {
+    margin-top: 3.5rem;
+    -webkit-transform: scaleY(1.36);
+    transform: scaleY(1.36)}
+.pal-headline-logo {
+    max-width: 90%;
+}
+
+
+.pal-overline{                        /* optional break line above sub-title */
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    border-top: 2px solid #404030;
+}
+.pal-blk-add {                            /* container for large number */
+    display: inline-block;
+    float: left;
+    width: 45%;
+    text-align: left;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 200%;
+    color: #404030;
+}
+
+.pal-blk-sym {                           /* container for heading text */
+    display: inline-block;
+    float: left;
+    width: 55%;
+    text-align: left;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 95%;
+    color: #404030;
+    margin-top: 0.3rem;
+}
+
+
+.pal-blk-family {                            /* container for large number */
+    margin-top:  1.4rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 100%;
+    color: #404030;
+}
+
+.pal-blk-title {                           /* container for heading text */
+    text-align: left;
+    font-family: "conc-c4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 73%;
+    color: #404030;
+    margin-top: 0.4rem;
+    margin-bottom: 1.6rem;
+}
+
+.pal-blk-auth {                            /* container for large number */
+    display: inline-block;
+    float: left;
+    width: 50%;
+    text-align: left;
+    font-family: "conc-c3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 67%;
+    color: #404030;
+}
+
+.pal-blk-ver-txt {                            /* container for large number */
+    display: inline-block;
+    float: left;
+    width: 35%;
+    text-align: right;
+    font-family: "conc-c3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 67%;
+    color: #404030;
+}
+
+.pal-blk-ver-rd {                            /* container for large number */
+    display: inline-block;
+    float: left;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#C0504D), to(#953735));
+    background-image: linear-gradient(#C0504D, #953735);
+    border-radius: 1rem;
+    text-shadow: 0px 2px #632523;
+    width: 12%;
+    text-align: center;
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 55%;
+    color: #fff;
+    margin-top: 0.2rem;
+}
+
+/* ----------------------------------------------------------------------------
+   HEADLINE TITLES - RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The title and heading text is resized as the screen narrows;
+   this is done to maintain the proportionality of the large number to the
+   smaller heading text, this stops at 960px, at this point the base
+   changes to the font-size take over, and no further manipulation is
+   required.
+
+   Below 5200px, the columns collapse and the double column elements are
+   resized to maintain the correct proportions.
+   ------------------------------------------------------------------------- */
+@media all                        {.pal-headline, pal-titl { font-size: 150%; }}
+@media all and (max-width:1290px) {.pal-headline { font-size: 144%; }}
+@media all and (max-width:1240px) {.pal-headline { font-size: 140%; }}
+@media all and (max-width:1200px) {.pal-headline { font-size: 135%; }}
+@media all and (max-width:1160px) {.pal-headline { font-size: 130%; }}
+@media all and (max-width:1120px) {.pal-headline { font-size: 125%; }}
+@media all and (max-width:1080px) {.pal-headline { font-size: 121%; }}
+@media all and (max-width:1040px) {.pal-headline { font-size: 116%; }}
+@media all and (max-width:1000px) {.pal-headline { font-size: 111%; }}
+@media all and (max-width:960px)  {.pal-headline { font-size: 111%; }}
+@media all and (max-width:920px)  {.pal-headline { font-size: 111%; }}
+@media all and (max-width:880px)  {.pal-headline { font-size: 111%; }}
+@media all and (max-width:840px)  {.pal-headline { font-size: 111%; }}
+@media all and (max-width:800px)  {.pal-headline { font-size: 111%; }}
+@media all and (max-width:760px)  {.pal-headline { font-size: 111%; }}
+@media all and (max-width:720px)  {.pal-headline { font-size: 111%; }}
+@media all and (max-width:680px)  {.pal-headline { font-size: 110%; }}
+@media all and (max-width:640px)  {.pal-headline { font-size: 110%; }}
+@media all and (max-width:600px)  {.pal-headline { font-size: 110%; }}
+@media all and (max-width:560px)  {.pal-headline { font-size: 109%; }}
+@media all and (max-width:520px)  {.pal-headline { font-size: 150%; }}
+
+
+@media all and (max-width:520px)  {.pal-blk-add { width: 34%; } .pal-blk-sym { width: 43%; }}
+@media all and (max-width:520px)  {.pal-blk-auth { width: 40%; } .pal-blk-ver-txt { width: 23%; text-align: left;}}
+
+
+/* ****************************************************************************
+   ASIDE IMAGE AND REVISION - OVERLOADING
+   ****************************************************************************
+   Overloads the properties in style.css to give the correct logo size and
+   revision information location (top margin)
+   ************************************************************************* */
+
+.aside-right-rev { margin-top: 0.9rem; }
+
+.aside-left-rev img {
+    width: 100%;
+    margin-top: 0.6rem;
+}
+
+
+/* ****************************************************************************
+   CHAPTER TITLE
+   ****************************************************************************
+   The chapter title contains the chapter number and the heading text
+
+        e.g.     2   Installing the software
+
+   The number is large (the same size a two lines of the heading text) and
+   appears at the left edge of the central column area and occupies 1/3 of the
+   width of this column. The heading text can be up to two lines in length and
+   fills the remaining 2/3 of the central column.
+
+   The large number has class .chap-num-box
+   The heading text has class .chap-text-box
+
+   The heading text should also include the section number contained within a
+   <span> of class .chap-small-num.
+
+   This .chap-small-num is not displayed until the screen width is less than
+   640px, at this point the large number is hidden and the small number
+   displayed.
+
+   The title row is equipped with left and right side columns (to maintain the
+   correct column spacing), but these are not used.
+   ************************************************************************* */
+
+
+.chap-num-box {                            /* container for large number */
+    display: inline-block;
+    float: left;
+    width: 20%;
+    text-align: left;
+    font-family: "conc-t2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 500%;
+    color: #404030;
+}
+
+.chap-text-box {                           /* container for heading text */
+    display: inline-block;
+    float: left;
+    width: 80%;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 190%;
+    line-height: 110%;
+    padding-top: 4.5%;
+    color: #404030
+}
+
+.chap-small-num { display: none; }         /* span for small number
+
+/* ----------------------------------------------------------------------------
+   HEADER TITLE BAR- RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The title large number and heading text is resized as the screen narrows;
+   this is done to maintain the proportionality of the large number to the
+   smaller heading text, this stops at 960px, at this point the base
+   changes to the font-size take over, and no further manipulation is
+   required.
+
+   Below 640px, the large number is no longer displayed and the smaller
+   version of the number (in the heading text area) is made visible
+   ------------------------------------------------------------------------- */
+
+@media all {.chap-num-box { font-size: 500%; } .chap-text-box { font-size: 190%; }}
+@media all and (max-width:1276px) {.chap-num-box { font-size: 500%; } .chap-text-box { font-size: 190%; }}
+@media all and (max-width:1240px) {.chap-num-box { font-size: 488%; } .chap-text-box { font-size: 185%; }}
+@media all and (max-width:1200px) {.chap-num-box { font-size: 470%; } .chap-text-box { font-size: 179%; }}
+@media all and (max-width:1160px) {.chap-num-box { font-size: 452%; } .chap-text-box { font-size: 172%; }}
+@media all and (max-width:1120px) {.chap-num-box { font-size: 438%; } .chap-text-box { font-size: 167%; }}
+@media all and (max-width:1080px) {.chap-num-box { font-size: 420%; } .chap-text-box { font-size: 160%; }}
+@media all and (max-width:1040px) {.chap-num-box { font-size: 406%; } .chap-text-box { font-size: 154%; }}
+@media all and (max-width:1000px) {.chap-num-box { font-size: 390%; } .chap-text-box { font-size: 148%; }}
+@media all and (max-width:960px)  {.chap-num-box { font-size: 395%; } .chap-text-box { font-size: 150%; }}
+@media all and (max-width:920px)  {.chap-num-box { font-size: 395%; } .chap-text-box { font-size: 150%; }}
+@media all and (max-width:880px)  {.chap-num-box { font-size: 395%; } .chap-text-box { font-size: 150%; }}
+@media all and (max-width:840px)  {.chap-num-box { font-size: 395%; } .chap-text-box { font-size: 150%; }}
+@media all and (max-width:800px)  {.chap-num-box { font-size: 395%; } .chap-text-box { font-size: 150%; }}
+@media all and (max-width:760px)  {.chap-num-box { font-size: 395%; } .chap-text-box { font-size: 150%; }}
+@media all and (max-width:720px)  {.chap-num-box { font-size: 395%; } .chap-text-box { font-size: 150%; }}
+@media all and (max-width:680px)  {.chap-num-box { font-size: 395%; } .chap-text-box { font-size: 150%; }}
+@media all and (max-width:640px){
+    .chap-num-box { display: none; }
+    .chap-text-box { width: 100%; }
+    .chap-small-num {
+        visibility: visible;
+        display:inline-block;
+        float:left;
+        margin-right: 2%;}
+    }
+
+
+
+
+/* ****************************************************************************
+   TABLES - INCIDENTAL (EN PASSANT) AND CLEAN
+   ****************************************************************************
+   These are used to hold the ABSTRACT entry.
+
+   The ABSTRACT often has bullet points, the software below replaces the
+   large bullet point used in unnumbered lists with a smaller one.
+   ************************************************************************* */
+
+
+.table-incid li:before {                    /* prefix the list with a large dot and */
+    content: "\25aa"; float: left;          /* force the margin to the correct position */
+    margin-left: -2rem;
+}
+.table-clean .list-no-num {                 /* TEXT STYLE - Un-numbered list */
+    margin-left: 2rem;
+}
+.table-clean .list-no-num li p {
+    padding-left: 0rem;
+}
+.table-clean li:before {                    /* prefix the list with a large dot and */
+    content: "\25aa"; float: left;          /* force the margin to the correct position */
+    margin-left: -1rem;
+}
+
+
+/* ****************************************************************************
+   TABLES - TECHNICAL SUMMARY
+   ****************************************************************************
+   Tables use the .table-clean class to produce a simple table with a bottom
+   border that is 84% of the section text area.
+
+   The first column of the table is an empty column of zero width that is used
+   to allow a minimum height to be specified for the row (html inline style),
+   this first row has class .leading
+
+   This first column (or leading column) is defined as the first-child of the
+   <th> and <td> elements (i.e. the first cell in each row and in the header
+   row).
+   ************************************************************************* */
+.table-tech {
+    font-family: "conc-c3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
+    width: 84%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+.table-tech th {
+    font-family: "conc-t2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
+    color: #fff;
+    background-color: #bfbfbf;
+    padding: 0.2rem;                        /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
+    border-bottom: 1px solid #cccccc;
+}
+.table-tech td {
+    line-height: 110%;
+    border-bottom: 1px solid #cccccc;
+}
+
+.table-tech p {                            /* where formal paragraphs are used in a table, manipulate the margins */
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+.table-tech p:last-child {
+    margin-bottom: 0.3rem;
+}
+
+.table-tech em {
+    font-family: "conc-t4-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-style:normal;
+}
+
+.tech-title { color: #808080; }
+.tech-body  { color: #446FBD; }
+
+/* ****************************************************************************
+   FIGURE - BORDER OUTLINE FOR TIA CODE
+   ****************************************************************************
+   Defines a border arounda an image
+   ************************************************************************* */
+
+.fig-outline {
+    padding: 24px;
+     border: 2px solid #BFBFBF
+}
+
+
+
+/* ****************************************************************************
+   CODE EXTRACT
+   ****************************************************************************
+   Code caption is left aligned
+   ************************************************************************* */
+
+.code-caption {                             /* code caption modifier */
+    text-align: left;
+}
+
+.code-header {                              /* code header (filename header) */
+    font-family: "conc-c3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: none;
+}
+
+
+/* ****************************************************************************
+   REVISION TABLE
+   ****************************************************************************
+   Holds page revision information
+   ************************************************************************* */
+.table-rev {
+    font-family: "conc-c2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    color: #aaa;
+    font-size: 0.5rem;
+    line-height: 1.0;
+    line-height: 140%;
+    width: 100%
+}
+.table-rev td {
+    line-height: 130%;
+}
+.table-rev td:first-child {              /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+}
+
+
+.nav-next {                               /* Modified NEXT section button in top nav bar */
+    display: inline-block;
+    float: left;
+    height: 60px;
+    padding-top: 18px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+.nav-next { width: 20%; }                   /* nav-next is 20% of top-nav */
+.nav-next:last-child { border-right: 0; }   /* remove right border on last area */
+
+
+
+.nav-next:link,                             /* navigation link options */
+.nav-next:visited {
+    color: #cccccc;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+}
+.nav-next:hover,                            /* navigation hover options */
+.nav-next:active {
+    color: #686868;
+    background-color: #f8f8f8;
+}
+
+.nav-on { display: inline-block; }          /* visibility sytles added by JavaScript to next/prev section buttons in nav bar */
+.nav-off { display: none;}
+
+.side-toc {
+    z-index: 9999;
+    top:30%;
+    max-width: 1276px;
+    position:fixed;
+}
+.side-toc-box {
+    font-family: "conc-c4-r";
+    color: #cccccc;
+    overflow: hidden;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+}
+.side-toc-head {
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.side-toc-box:hover {
+    height: auto;
+    min-height: 8rem;
+    width: auto;
+    color: #686868;
+    border: 1px solid #cccccc;
+    background-color: #f8f8f8;
+    font-family: "conc-c4-r";
+    font-size: 0.8rem;
+}
+.side-toc-box:hover .side-toc-head:after {
+   content: "ontents"
+}
+
+.side-toc-line {
+    display: none;
+    width:26rem;                                /* width of expanded TOC box */
+    -webkit-column-count: 2;
+    column-count: 2;
+    margin:0;
+    padding-bottom: 0.5rem;                     /* padding to bottom of TOC box */
+    list-style: none;
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.6rem;
+}
+.side-toc-line li a:link,                        /* format the TOC list text */
+.side-toc-line li a:visited,
+.side-toc-line li a:hover,
+.side-toc-line li a:active {
+    text-decoration: none;
+}
+.side-toc-lev .home {font-family: "conc-t3-b";}
+
+.side-toc-lev:link,                              /* format the link hover background */
+.side-toc-lev:visited { -webkit-transition: background-color 0.2s; transition: background-color 0.2s; }
+.side-toc-lev:hover,
+.side-toc-lev:active  { background-color: #ddd; }
+
+.side-toc-lev1-chap {
+    display: inline-block;
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    vertical-align: top;
+    text-align: right;
+    width: 1.1rem;                              /* Width of chapter number */
+    padding-left: 0.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+}
+.side-toc-lev1-sec {
+    display: inline-block;
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    vertical-align: top;
+    width: 1.5rem;                              /* Width of section number */
+    text-align: left;
+    padding-left: 1px;
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+}
+.side-toc-lev1-text {
+    display: inline-block;
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    width: 10rem;                              /* Width of text number */
+    padding-right: 0.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+}
+.side-toc-lev2-chap {
+    display: inline-block;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    vertical-align: top;
+    text-align: right;
+    width: 1.1rem;
+    padding-left: 0.2rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+.side-toc-lev2-sec {
+    display: inline-block;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    vertical-align: top;
+    width: 1.5rem;
+    text-align: left;
+    padding-left: 1px;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+.side-toc-lev2-text {
+    display: inline-block;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    width: 10rem;
+    padding-right: 0.2rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+.side-toc:hover .side-toc-line {
+    display: inline-block;
+}
+
+.toc-active {
+    color:#4C6C9C;
+    font-weight: bold;
+}
+
