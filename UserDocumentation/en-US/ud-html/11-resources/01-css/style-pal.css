@@ -78,6 +78,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+03 Jun 2018   D02          M. Gledhill    Side TOC adjusted for responsiveness
+
 20 Sep 2018   D00          M. Gledhill    File created
 ---------------------------------------------------------------------------- */
 
@@ -369,7 +371,7 @@ Date          Issue        Author         Reason for Modification
 
 
 /* ****************************************************************************
-   TABLES - INCIDENTAL (EN PASSANT) AND CLEAN
+   TABLES - INCIDENTAL (EN PASSANT) AND CLEAN OVERLOADING
    ****************************************************************************
    These are used to hold the ABSTRACT entry.
 
@@ -449,7 +451,10 @@ Date          Issue        Author         Reason for Modification
 }
 
 .tech-title { color: #808080; }
-.tech-body  { color: #446FBD; }
+.tech-body  {
+    font-family: "conc-c3-r";
+    color: #446FBD;
+}
 
 /* ****************************************************************************
    FIGURE - BORDER OUTLINE FOR TIA CODE
@@ -575,7 +580,6 @@ Date          Issue        Author         Reason for Modification
 
 .side-toc-line {
     display: none;
-    width:26rem;                                /* width of expanded TOC box */
     -webkit-column-count: 2;
     column-count: 2;
     margin:0;
@@ -592,12 +596,17 @@ Date          Issue        Author         Reason for Modification
 .side-toc-line li a:active {
     text-decoration: none;
 }
-.side-toc-lev .home {font-family: "conc-t3-b";}
 
 .side-toc-lev:link,                              /* format the link hover background */
 .side-toc-lev:visited { -webkit-transition: background-color 0.2s; transition: background-color 0.2s; }
 .side-toc-lev:hover,
 .side-toc-lev:active  { background-color: #ddd; }
+
+.side-toc-home {font-family: "conc-t3-b";}
+.side-toc-home:link,                              /* format the link hover background */
+.side-toc-home:visited { -webkit-transition: background-color 0.2s; transition: background-color 0.2s; }
+.side-toc-home:hover,
+.side-toc-home:active  { background-color: #ddd; }
 
 .side-toc-lev1-chap {
     display: inline-block;
@@ -625,43 +634,9 @@ Date          Issue        Author         Reason for Modification
     display: inline-block;
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
-    width: 10rem;                              /* Width of text number */
+    min-width: 10rem;                              /* Width of text number */
     padding-right: 0.2rem;
     margin-top: 0.2rem;
-    margin-bottom: 0.1rem;
-}
-.side-toc-lev2-chap {
-    display: inline-block;
-    font-family: "conc-t3-r";
-    -webkit-font-feature-settings: "ss02";
-    font-feature-settings: "ss02";
-    vertical-align: top;
-    text-align: right;
-    width: 1.1rem;
-    padding-left: 0.2rem;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-}
-.side-toc-lev2-sec {
-    display: inline-block;
-    font-family: "conc-t3-r";
-    -webkit-font-feature-settings: "ss02";
-    font-feature-settings: "ss02";
-    vertical-align: top;
-    width: 1.5rem;
-    text-align: left;
-    padding-left: 1px;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-}
-.side-toc-lev2-text {
-    display: inline-block;
-    font-family: "conc-t3-r";
-    -webkit-font-feature-settings: "ss02";
-    font-feature-settings: "ss02";
-    width: 10rem;
-    padding-right: 0.2rem;
-    margin-top: 0.1rem;
     margin-bottom: 0.1rem;
 }
 .side-toc:hover .side-toc-line {
@@ -673,3 +648,40 @@ Date          Issue        Author         Reason for Modification
     font-weight: bold;
 }
 
+/* ----------------------------------------------------------------------------
+   SIDE TOC- RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The title large number and heading text is resized as the screen narrows;
+   this is done to maintain the proportionality of the large number to the
+   smaller heading text, this stops at 960px, at this point the base
+   changes to the font-size take over, and no further manipulation is
+   required.
+
+   Below 640px, the large number is no longer displayed and the smaller
+   version of the number (in the heading text area) is made visible
+   ------------------------------------------------------------------------- */
+
+@media all {.side-toc-line { font-size: 0.6rem; }}
+@media all and (max-width:1080px) {.side-toc-line { font-size: 0.7rem; }}
+@media all and (max-width:800px)  {.side-toc-line { font-size: 0.8rem; }}
+@media all and (max-width:720px)  {.side-toc-line { font-size: 0.9rem; }}
+@media all and (max-width:640px)  {.side-toc { display: none; }}
+
+
+
+
+/* ****************************************************************************
+   ADDITIONAL INLINE TEXT STYLES
+   ************************************************************************* */
+.abs {                                     /* TEXT STYLE - code fragment */
+    font-family: "trip-t4-r";
+    font-size: 0.95em;
+    color: #009999;
+}
+.block {                                     /* TEXT STYLE - code fragment */
+    font-family: "conc-c4-r";
+    font-size: 0.95em;
+    color: #009999;
+}
+
+.end-space {margin-top: 10rem}

@@ -104,12 +104,14 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD CSS LOAD
      ***********************************************************************-->
-        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="../ud-html/21-global/03-fonts/ps-fonts.css">
+        <!-- Load PS fonts -->          <link rel="stylesheet" type="text/css" href="../ud-html/21-global/03-fonts/ps-fonts.css">
+        <!-- Load TIA fonts -->         <link rel="stylesheet" type="text/css" href="../ud-html/21-global/03-fonts/tia-fonts.css">
         <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="../ud-html/21-global/01-css/ionicons.min.css">
         <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="../ud-html/21-global/01-css/normalise.css">
         <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="../ud-html/21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="../ud-html/11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="../ud-html/11-resources/01-css/style.css">
+        <!-- PAL styles -->             <link rel="stylesheet" type="text/css" href="../ud-html/11-resources/01-css/style-pal.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
         <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="../ud-html/01-pages/98-00-blank/01-local-css/98-00-codeline.css">
 
@@ -299,7 +301,59 @@ Date          Issue        Author         Reason for Modification
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP CHAPTER]
+     CHAPTER - 1. [NUMBERED CHAPTER FOR PAL WITH TOC-EN CLASS]
+     ***********************************************************************-->
+
+        <section class="section-std toc-en" id="js--990000">    <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                    <div class="chap-num-box"><p>1</p></div>
+                    <div class="chap-text-box"><h1><span class="chap-small-num">1</span>Numbered chapter</h1></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is a numbered chapter, it will be numbered X.</p>
+
+                    <p class="hyp">It is used within the PS Automation Library document to reflect the chapter numbers within the PAL documents (SMDS &amp;c.).</p>
+
+                    <p class="hyp">The start of each section is given the  class <span class="code">toc-en</span>, this allows the JavaScript code to work out which section of the document is currently in the view port and to highlight the pop-up toc list entries accordingly.</p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -672,6 +726,142 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-left">
                                 <p><span class="first-use">Word has a couple of undocumented features</span>; just type =lorem() on a blank line and hit enter to get lorem ipsum padding text (add a number between the brackets to get that many lines of lorem ipsum)..</p>
                             </td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p> <br class="toc-pad"></p>
+                    <p class="hyp">Abstract table (for PAL documents):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - ABSTRACT TABLE (based on  en passant table)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-incid" style="width: 100%;">
+<!-- Data row -->       <tr class="in-no-border">
+                            <td class="table-left">
+                                <p class="hyp">This block is part of the Practical Series Automation Library (PAL); a library of software modules and templates that have been made available for the Siemens Simatic S7-1500 range of controllers. It is fully deployable software that is suitable for the control of most industrial process applications. </p>
+
+                                <p class="hyp">All the blocks within the PAL conform to the PAL style guide. This block (FC&nbsp;00001) is a template module that holds common arrangements for various aspects of the block notation and documentation styles.</p>
+
+                                <p class="hyp">It sets out the basic approach to documenting a block and includes:</p>
+
+                                <ul class="list-no-num">
+                                    <li><p><span class="sans">Block title and a standard PAL block header</span></p></li>
+                                    <li><p><span class="sans">Example block descriptions and styling information</span></p></li>
+                                    <li><p><span class="sans">Revision and modification history examples</span></p></li>
+                                    <li><p><span class="sans">Typical title, subtitle and text conventions for the PAList</span></p></li>
+                                    <li><p><span class="sans">Examples usage of figures and equations</span></p></li>
+                                    <li><p><span class="sans">A list of common symbols and spacing arrangements</span></p></li>
+                                </ul>
+
+                                <p class="hyp">The PAL is configured and deployed using the Siemens Simatic TIA Portal programming environment.</p>
+
+                                <p class="hyp">The Practical Series Automation Library is freely available under the MIT Open Source licence.</p>
+                            </td>
+                        </tr>
+
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p> <br class="toc-pad"></p>
+                    <p class="hyp">Technical table (for PAL block data):</p>
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - TECHNICAL SUMMARY TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-tech">
+<!-- Nomenclature -->   <tr class="no-border">
+                            <th  colspan="2" class="table-left" style="">Nomenclature and addressing</th>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left" style="width: 30%"></td>
+                            <td class="table-left" style="width: 70%"></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">FAMILY</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >Documentation Template </span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">TITLE</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" aria-atomic="">Template for Block Documentation and Styles</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">BLOCK ADDRESS</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" ><em>FC 00001</em></span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">SYMBOL</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >SMDS_DocGenExample</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">USER ID</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >DocGenExample</span></p></td>
+                        </tr>
+
+<!-- Type & usage -->   <tr class="no-border">
+                            <th  colspan="2" class="table-left">Block type and usage</th>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">BLOCK TYPE</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >Function (FC)</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">BLOCK NUMBER</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >00001</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">LANGUAGE</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >LAD</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">OPTIMISED ACCESS</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >YES</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">PAL USAGE TYPE</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >Template</span></p></td>
+                        </tr>
+
+<!-- Version -->        <tr class="no-border">
+                            <th  colspan="2" class="table-left" style="">Version</th>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">VERSION</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >D00.05</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">DATE</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >2018-09-10</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">AUTHOR</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >M. Gledhill</span></p></td>
+                        </tr>
+
+<!-- Metrics -->        <tr class="no-border">
+                            <th  colspan="2" class="table-left">Metrics</th>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">EXECUTION TIME </span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >1.11 &micro;s</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">LOAD MEMORY</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >18.29 kB</span></p></td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="table-left"><p><span class="tech-title">WORK MEMORY</span></p></td>
+                            <td class="table-left"><p><span class="tech-body" >0.14 kB</span></p></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-left"></td>
+                            <td class="table-left"></td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td colspan="2" class="table-caption"></td>
                         </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
