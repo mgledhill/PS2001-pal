@@ -51,16 +51,9 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-02 Aug 2018   R02          M. Gledhill    Second formal release
+03 Jun 2019   D03          M. Gledhill    Dynamic navigation software added
 
-24 Jul 2018   d-R01.00.01  M. Gledhill    Social media icons manipulation added
-
-23 Sep 2017   R01          M. Gledhill    First formal release
-
-04 Jun 2017   P01          M. Gledhill    First published
-
-27 May 2017   D00.00.01    M. Gledhill    Development - based on PS P06.02
-
+15 May 2018   D00          M. Gledhill    Development - based on PS1002 R01
 ---------------------------------------------------------------------------- */
 
 
@@ -103,33 +96,10 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
             $('.side-toc').removeClass('nav-on');
         }
     }, {
-    offset: '70px'                                      /* check for waypoint 60px before top of screen */
+    offset: '60px'                                      /* check for waypoint 60px before top of screen */
     });                                                 /* END of Waypoint function */
 
 
-
-     var secCount = $(".toc-en").length;
-    console.log("secCount = " + secCount);
-
-
-
-
-
-      var inview = new Waypoint.Inview({
-      element: $('#js--010000')[0],
-      enter: function(direction) {
-         console.log("010000 Enter " + direction );
-      },
-      entered: function(direction) {
-        console.log("010000 Entered " + direction);
-      },
-      exit: function(direction) {
-         console.log("010000 Exit " + direction);
-      },
-      exited: function(direction) {
-         console.log("010000 Exited " + direction);
-      }
-    });
 
 
 /* ****************************************************************************
@@ -162,6 +132,20 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
         function(){ $(this).removeClass('ion-social-twitter-outline'); },
         function(){ $(this).addClass('ion-social-twitter-outline'); }
     );
+
+
+/* ****************************************************************************
+   DYNAMIC NAVIGATION - IDENTIFY CURRENT TOC-EN SECTION
+   ****************************************************************************
+   Identifies the current toc-en from the position on the screen
+   ************************************************************************* */
+
+
+    findSection();                              /* call function on page load */
+
+    $(window).scroll(function() {               /* call function on scroll */
+        findSection();
+    });
 
 
 /* ****************************************************************************
@@ -279,6 +263,101 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
       return false;
     }
 /* ************************************************************************* */
+
+
+
+ /* ---------------------------------------------------------------------------
+   FUNCTION DECLARATION -   findSection
+   ---------------------------------------------------------------------------
+   Identifies which instance of a section with the class .toc-en is currently
+   at the top of the view port
+   ------------------------------------------------------------------------- */
+    function findSection() {
+
+/*      ----------------------------------------------------------------------
+        VARIABLES
+        ----------------------------------------------------------------------
+            secCount        The number of sections with class .toc-en
+            linkCount       The number of links in the side TOC with class
+                            .side-toc-lev
+            prevCount       The number of previous buttons in the nav bar
+            nextCount       The number of next buttons in the nav bar
+
+            vpTop           Distance from top of page to top of viewport (px)
+            nvHeight        Current height of navigation bar at top of page (px)
+            instTop         Distance from top of page to .toc-en section
+                            being examined
+            instBottom      Distance from top of page to bottom of the .toc-en
+                            section being examined (the bottom is the usually
+                            the start of the following .toc-en section, or if
+                            this is the last .toc-en section, then the bottom
+                            of this .toc-en section)
+            instHeight      The height of the .toc-en section being examined
+            secActiveVal    The number of the current .toc-en that is visible
+                            imediately below the nav bar, this is the active
+                            section (sections are numbered from 0)
+
+        -------------------------------------------------------------------- */
+        var secCount  = $('.toc-en').length;                                    /* identify how many toc listed sections are present */
+        var linkCount = $('.side-toc-lev').length;                              /* identify how many links are in the side toc */
+        var prevCount = $('.nav-prev').length;                                  /* identify how many next buttons are in the nav bar */
+        var nextCount = $('.nav-next').length;                                  /* identify how many prev buttons are in the nav bar */
+
+        var vpTop = $(window).scrollTop();                                      /* position of top of viewport in document */
+        var nvHeight =$('nav').height();                                        /* height of navigation bar */
+
+        var secActiveVal = 0;                                                   /* holds the active section number at end of loop */
+        var instTop;                                                            /* distance to top of section identified by i counter */
+        var instHeight;                                                         /* height of the section identified by i counter */
+        var instBottom;                                                         /* distance to bottom of section identified by i counter */
+        var i,j;                                                                /* loop counter */
+
+        /* EXAMINE EACH SECTION TO SEE IF IT IS THE ACTIVE SECTION */
+        for (i=secCount-1; i >= 0; i--) {                                       /* count down through sections from last to first */
+
+            j=i+1;                                                              /* j points to section that follows the current section */
+
+            instTop = $(".toc-en:eq("+i+")").offset().top;                      /* find distance to top of current section */
+            instHeight = $(".toc-en:eq("+i+")").height();                       /* find height of current section */
+
+            if (i<(secCount-1)) {                                               /* IF this section is not the last section, then the bottom */     instBottom = $(".toc-en:eq("+ j +")").offset().top;             /* of this section is considered to be the start of the */
+                }                                                               /* following section */
+            else {                                                              /* OTHERWISE this is the last section, so set the bottom */
+                instBottom = instTop + instHeight;                              /* of this section to be the top of this section plus the */
+            }                                                                   /* height of this section */
+
+            if (instTop<=(vpTop+nvHeight) && (instBottom)>(vpTop+nvHeight)) {   /* if the current section is visible in the first */
+                secActiveVal = i-1;                                             /* pixel positon below the nav bar, it is  */
+            }                                                                   /* the active section. Subtract 1 to account for */
+                                                                                /* the title area, this has a .toc-en class, but has */
+                                                                                /* no corresponding link in the side TOC */
+        }
+
+
+        /* SET THE ACTIVE SECTION IN THE SIDE TOC */
+        if (secActiveVal < 0){                                                  /* if the active section is less than zero (title area) */
+            $('.side-toc-lev').removeClass("toc-active");                       /* remove .toc-active class from all side TOC links */
+         } else {                                                               /* OTHERWISE */
+            $('.side-toc-lev').removeClass("toc-active");                       /* remove .toc-active class from all side TOC links */
+            $('.side-toc-lev').eq(secActiveVal).addClass("toc-active");         /* and then apply it to the link for the current section */
+         }
+
+         /* SET THE ACTIVE NEXT AND PREVIOUS SECTION BUTTONS IN THE NAV BAR */
+        if (secActiveVal < 0){                                                  /* if the active section is less than zero (error check) */
+            $('.nav-prev').removeClass("nav-on");                               /* dissable all nav-prev links */
+            $('.nav-prev').eq(0).addClass("nav-on");                            /* and activate the first nav-prev link (empty box) */
+            $('.nav-next').removeClass("nav-on");                               /* dissable all nav-next links */
+            $('.nav-next').eq(0).addClass("nav-on");                            /* and activate the first nav-next link (abstract) */
+         } else {                                                               /* OTHERWISE */
+            $('.nav-prev').removeClass("nav-on");                               /* dissable all nav-prev links */
+            $('.nav-prev').eq(secActiveVal).addClass("nav-on");                 /* and activate the nav-prev corresponding to previous sec */
+            $('.nav-next').removeClass("nav-on");                               /* dissable all nav-next links */
+            $('.nav-next').eq(secActiveVal+1).addClass("nav-on");               /* and activate the nav-next corresponding to next sec */
+         }
+
+    }
+/* ************************************************************************* END OF findSection FUNCTION */
+
 
 
 });                                                 /* END OF PAGE READY FUNCTION */

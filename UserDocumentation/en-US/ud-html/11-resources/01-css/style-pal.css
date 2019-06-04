@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          PRACTICAL SERIES AUTOMATION LIBRARY (PAL)            STYLE.CSS
+Title :          PRACTICAL SERIES AUTOMATION LIBRARY (PAL)        STYLE-PAL.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -15,11 +15,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
 -------------------------------------------------------------------------------
 DETAILS
 
-This is an additional style sheet for the PAL block header area, it provides
+This is an additional style sheet for the PAL documentation, it provides
 additional styles for:
 
         Cover features (titles & picture)
+        Revision data
         Header title bar
+        Side TOC bar
+        Previous and next section dynamic navigation bar
 
 The style sheet also contains responsive formatting for each of the areas
 (responsive settings are at the end of each section).
@@ -36,8 +39,8 @@ of style sheets and the order in which they should be called is given here:
         ionicons.min.css        - loads the ionicon social media fonts
         grid.css                - defines a responsive grid (Kerstner grid)
                                   for columns within the website
-        style.css               - this file
-        style-pal.css           - additional styles associated with the PAL
+        style.css               - original PS style sheet
+        style-pal.css           - this file
 
 -------------------------------------------------------------------------------
 COLOURS IN USE
@@ -78,6 +81,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+04 Jun 2018   D03          M. Gledhill    Tables (various) added
+
 03 Jun 2018   D02          M. Gledhill    Side TOC adjusted for responsiveness
 
 20 Sep 2018   D00          M. Gledhill    File created
@@ -86,7 +91,8 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-#rev-pal:after { content: "D00.01"; }
+#rev-pal:after { content: "D03"; }
+
 
 /* ****************************************************************************
    PAL LOGO & HEADLINE TITLES
@@ -97,8 +103,7 @@ Date          Issue        Author         Reason for Modification
    This is the first area a visitor to the site sees.
    ************************************************************************* */
 
-.pal-title-row {                                /* container for whole row */
- /*   margin-top: 3rem;*/
+.pal-title-row {                            /* container for whole row */
     z-index: 1;
 }
 
@@ -109,7 +114,7 @@ Date          Issue        Author         Reason for Modification
     color: #1F2D41;
     font-size: 150%;
 }
-.pal-headline h1 {                           /* format h1 - MAIN TITLE */
+.pal-headline h1 {                          /* format h1 - MAIN TITLE */
     font-family: "conc-c2-r";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
@@ -125,12 +130,12 @@ Date          Issue        Author         Reason for Modification
 }
 
 
-.pal-overline{                        /* optional break line above sub-title */
+.pal-overline{                              /* optional break line above sub-title */
     margin-top: 5rem;
     margin-bottom: 0.5rem;
     border-top: 2px solid #404030;
 }
-.pal-blk-add {                            /* container for large number */
+.pal-blk-add {                              /* container for large number */
     display: inline-block;
     float: left;
     width: 45%;
@@ -142,7 +147,7 @@ Date          Issue        Author         Reason for Modification
     color: #404030;
 }
 
-.pal-blk-sym {                           /* container for heading text */
+.pal-blk-sym {                              /* container for heading text */
     display: inline-block;
     float: left;
     width: 55%;
@@ -156,7 +161,7 @@ Date          Issue        Author         Reason for Modification
 }
 
 
-.pal-blk-family {                            /* container for large number */
+.pal-blk-family {                           /* container for large number */
     margin-top:  1.4rem;
     text-align: left;
     text-transform: uppercase;
@@ -167,7 +172,7 @@ Date          Issue        Author         Reason for Modification
     color: #404030;
 }
 
-.pal-blk-title {                           /* container for heading text */
+.pal-blk-title {                            /* container for heading text */
     text-align: left;
     font-family: "conc-c4-r";
     -webkit-font-feature-settings: "ss02";
@@ -178,7 +183,7 @@ Date          Issue        Author         Reason for Modification
     margin-bottom: 1.6rem;
 }
 
-.pal-blk-auth {                            /* container for large number */
+.pal-blk-auth {                             /* container for large number */
     display: inline-block;
     float: left;
     width: 50%;
@@ -190,7 +195,7 @@ Date          Issue        Author         Reason for Modification
     color: #404030;
 }
 
-.pal-blk-ver-txt {                            /* container for large number */
+.pal-blk-ver-txt {                          /* container for large number */
     display: inline-block;
     float: left;
     width: 35%;
@@ -202,7 +207,7 @@ Date          Issue        Author         Reason for Modification
     color: #404030;
 }
 
-.pal-blk-ver-rd {                            /* container for large number */
+.pal-blk-ver-rd {                           /* container for large number */
     display: inline-block;
     float: left;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#C0504D), to(#953735));
@@ -252,8 +257,6 @@ Date          Issue        Author         Reason for Modification
 @media all and (max-width:600px)  {.pal-headline { font-size: 110%; }}
 @media all and (max-width:560px)  {.pal-headline { font-size: 109%; }}
 @media all and (max-width:520px)  {.pal-headline { font-size: 150%; }}
-
-
 @media all and (max-width:520px)  {.pal-blk-add { width: 34%; } .pal-blk-sym { width: 43%; }}
 @media all and (max-width:520px)  {.pal-blk-auth { width: 40%; } .pal-blk-ver-txt { width: 23%; text-align: left;}}
 
@@ -270,6 +273,30 @@ Date          Issue        Author         Reason for Modification
 .aside-left-rev img {
     width: 100%;
     margin-top: 0.6rem;
+}
+
+
+/* ****************************************************************************
+   REVISION TABLE
+   ****************************************************************************
+   Holds page revision information
+   ************************************************************************* */
+.table-rev {
+    font-family: "conc-c2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    color: #aaa;
+    font-size: 0.5rem;
+    line-height: 1.0;
+    line-height: 140%;
+    width: 100%
+}
+.table-rev td {
+    line-height: 130%;
+}
+.table-rev td:first-child {              /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
 }
 
 
@@ -328,7 +355,7 @@ Date          Issue        Author         Reason for Modification
 .chap-small-num { display: none; }         /* span for small number
 
 /* ----------------------------------------------------------------------------
-   HEADER TITLE BAR- RESPONSIVE COMPONENTS
+   CHAPTER TITLE - RESPONSIVE COMPONENTS
    ----------------------------------------------------------------------------
    The title large number and heading text is resized as the screen narrows;
    this is done to maintain the proportionality of the large number to the
@@ -368,8 +395,6 @@ Date          Issue        Author         Reason for Modification
     }
 
 
-
-
 /* ****************************************************************************
    TABLES - INCIDENTAL (EN PASSANT) AND CLEAN OVERLOADING
    ****************************************************************************
@@ -380,10 +405,6 @@ Date          Issue        Author         Reason for Modification
    ************************************************************************* */
 
 
-.table-incid li:before {                    /* prefix the list with a large dot and */
-    content: "\25aa"; float: left;          /* force the margin to the correct position */
-    margin-left: -2rem;
-}
 .table-clean .list-no-num {                 /* TEXT STYLE - Un-numbered list */
     margin-left: 2rem;
 }
@@ -394,21 +415,68 @@ Date          Issue        Author         Reason for Modification
     content: "\25aa"; float: left;          /* force the margin to the correct position */
     margin-left: -1rem;
 }
+/* ****************************************************************************
+   TABLES - ABSTRACT
+   ****************************************************************************
+   Incidental tables hold additional information (in a similar way to an aside)
+   but span the central content area and can contain more information than an
+   aside.
+
+   The table spans 84% of the content area, is lightly shaded and uses
+   small caps for the heading.
+
+   ************************************************************************* */
+
+.table-abs {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.8em;
+    background-color: #fbfbfb;
+
+}
+.table-abs th {
+    font-family: "conc-c3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;   /* top padding to separate from prev text */
+    border-top: 1px solid #cccccc;
+}
+.table-abs td {
+    padding: 0.25rem 0.2rem;
+    line-height: 130%;
+}
+.table-abs em {
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-style:normal;
+}
+
+.table-abs p {                            /* where formal paragraphs are used in a table, manipulate the margins */
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+.table-abs p:last-child {
+    margin-bottom: 0.3rem;
+}
+
+.table-abs li:before {                    /* prefix the list with a large dot and */
+    content: "\25aa"; float: left;          /* force the margin to the correct position */
+    margin-left: -2rem;
+}
 
 
 /* ****************************************************************************
    TABLES - TECHNICAL SUMMARY
    ****************************************************************************
-   Tables use the .table-clean class to produce a simple table with a bottom
-   border that is 84% of the section text area.
-
-   The first column of the table is an empty column of zero width that is used
-   to allow a minimum height to be specified for the row (html inline style),
-   this first row has class .leading
-
-   This first column (or leading column) is defined as the first-child of the
-   <th> and <td> elements (i.e. the first cell in each row and in the header
-   row).
+   The technical summary table use shading for the heading areas and a
+   different font arrangement to other tables
    ************************************************************************* */
 .table-tech {
     font-family: "conc-c3-r";
@@ -421,10 +489,11 @@ Date          Issue        Author         Reason for Modification
     margin-bottom: 1rem;
 }
 .table-tech th {
-    font-family: "conc-t2-r";
+    font-family: "conc-c3-r";
+    font-weight: normal;
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: #fff;
     background-color: #bfbfbf;
     padding: 0.2rem;                        /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
@@ -455,6 +524,190 @@ Date          Issue        Author         Reason for Modification
     font-family: "conc-c3-r";
     color: #446FBD;
 }
+
+
+/* ****************************************************************************
+   TABLES - DATA STRUCTURE
+   ****************************************************************************
+   Table for holding data structure information, has a two line header
+   ************************************************************************* */
+
+.table-struc {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.55rem;
+    width:90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.table-struc tr:first-child {               /* Apply a top border to first row */
+    border-top: 1px solid #ccc;
+}
+.table-struc th {
+    font-family: "conc-t2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    font-size: 0.55rem;
+    letter-spacing: 0.086em;
+    color: #7F7F7F;
+    padding: 0rem 0.2rem 0.25rem 0.2rem;    /* top padding to separate from prev text */
+    border-bottom: 1px solid #cccccc;
+}
+.table-struc td {
+    padding: 0.25rem 0.2rem;
+    line-height: 130%;
+    border-bottom: 1px solid #cccccc;
+}
+.table-struc th:first-child {               /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+.table-struc td:first-child {              /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.table-struc em {
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-style:normal;
+}
+
+.struc-name {
+    font-family: "trip-t4-r";
+    font-size: 0.65rem;
+    color: #4F81BD;
+}
+
+.struc-title {
+    font-family: "conc-t2-r";
+    font-weight: bold;
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    font-size: 0.55rem;
+    letter-spacing: 0.086em;
+    color: #7F7F7F;
+    text-align: left
+}
+
+/* ****************************************************************************
+   TABLES - TAG TABLE
+   ****************************************************************************
+   Table for holding tag data
+   ************************************************************************* */
+
+.table-tag {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.55rem;
+    width:90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.table-tag th {
+    font-family: "conc-t2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    font-size: 0.55rem;
+    letter-spacing: 0.086em;
+    color: #7F7F7F;
+    padding: 0rem 0.2rem 0.25rem 0.2rem;    /* top padding to separate from prev text */
+    border-bottom: 1px solid #cccccc;
+}
+.table-tag td {
+    padding: 0.25rem 0.2rem;
+    line-height: 130%;
+    border-bottom: 1px solid #cccccc;
+}
+.table-tag th:first-child {               /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+.table-tag td:first-child {              /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.table-tag em {
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-style:normal;
+}
+
+
+/* ****************************************************************************
+   TABLES - SOFTWARE REVISION HISTORY
+   ************************************************************************* */
+.table-swrev {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: rem;
+    margin-top: 2rem;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
+}
+.table-swrev th {
+    font-family: "conc-c3-r";
+    font-weight: normal;
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+
+    color: #7F7F7F;
+    padding: 0.8rem 0.2rem 0.25rem 0.2rem;  /* top padding to separate from prev text */
+    border-bottom: 1px solid #cccccc;
+}
+.table-swrev td {
+    padding: 0.25rem 0.2rem;
+    line-height: 120%;
+    border-bottom: 1px solid #cccccc;
+}
+
+.table-swrev th:first-child {               /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+}
+.table-swrev td:first-child {               /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+}
+
+.table-swrev p {                            /* where formal paragraphs are used in a table, manipulate the margins */
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+.table-swrev p:last-child {
+    margin-bottom: 0.3rem;
+}
+/* ****************************************************************************
+   TABLES - ROW BACKGROUND COLOURING
+   ************************************************************************* */
+
+.table-blu {background-color: #DBE5F1}
+.table-grn {background-color: #EBF1DD}
+.table-red {background-color: #F2DCDB}
+
+
+
+
 
 /* ****************************************************************************
    FIGURE - BORDER OUTLINE FOR TIA CODE
@@ -488,31 +741,26 @@ Date          Issue        Author         Reason for Modification
 
 
 /* ****************************************************************************
-   REVISION TABLE
+   DYNAMIC NAVIGATION BAR
    ****************************************************************************
-   Holds page revision information
+   The navigation bar has a link box on the far left for previous section and
+   on the far right for next section, these change dynamically (with
+   JavaScript) to point to the sections either side of the section currently
+   at the top of the view port.
+
+   The link boxes have the classes .nav-prev and .nav-next respectively.
+
+   Each of these navigation boxes has 12 of the links included (one for
+   each section in the web page), the correct link is activated by applying
+   either a .nav-on (make it visible) or .nav-off (hide it) class.
+
+   The .nav-on and .nav-off classes are applied by the JavaScript code in
+   script.js (it is the same for all webpages)
    ************************************************************************* */
-.table-rev {
-    font-family: "conc-c2-r";
-    -webkit-font-feature-settings: "ss02";
-    font-feature-settings: "ss02";
-    color: #aaa;
-    font-size: 0.5rem;
-    line-height: 1.0;
-    line-height: 140%;
-    width: 100%
-}
-.table-rev td {
-    line-height: 130%;
-}
-.table-rev td:first-child {              /* first-child is leading (min-height row) */
-    padding: 0;                             /* this has no margins, padding or border */
-    margin: 0;
-}
 
-
+.nav-prev,
 .nav-next {                               /* Modified NEXT section button in top nav bar */
-    display: inline-block;
+    display: none;
     float: left;
     height: 60px;
     padding-top: 18px;
@@ -521,17 +769,20 @@ Date          Issue        Author         Reason for Modification
     border-bottom: 1px solid #CCCCCC;
     border-right: 1px solid #CCCCCC;
 }
+.nav-prev,
 .nav-next { width: 20%; }                   /* nav-next is 20% of top-nav */
-.nav-next:last-child { border-right: 0; }   /* remove right border on last area */
+.nav-next { border-right: 0; }              /* remove right border on last area */
 
-
-
+.nav-prev:link,                             /* navigation link options */
+.nav-prev:visited,
 .nav-next:link,                             /* navigation link options */
-.nav-next:visited {
+.nav-next:visited{
     color: #cccccc;
     -webkit-transition: background-color 0.2s, color 0.2s;
     transition: background-color 0.2s, color 0.2s;
 }
+.nav-prev:hover,                            /* navigation hover options */
+.nav-prev:active,
 .nav-next:hover,                            /* navigation hover options */
 .nav-next:active {
     color: #686868;
@@ -540,6 +791,85 @@ Date          Issue        Author         Reason for Modification
 
 .nav-on { display: inline-block; }          /* visibility sytles added by JavaScript to next/prev section buttons in nav bar */
 .nav-off { display: none;}
+
+
+/* ----------------------------------------------------------------------------
+   NAVIGATION - RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The navigation button height is progressively reduced as the screen width
+   contracts, the padding above the text is adjusted to keep the text
+   vertically centred (the font size decreases in line with the base font
+   settings).
+
+   Below 680px, the text disappears leaving only the arrow symbols (set to 20px)
+   with a fixed button height of 40px.
+   ------------------------------------------------------------------------- */
+
+@media all {.nav-prev, .nav-next  { height: 60px; }}
+@media all and (max-width:1276px) {.nav-prev, .nav-next { height: 60px; padding-top: 18px; }}
+@media all and (max-width:960px)  {.nav-prev, .nav-next { height: 57px; padding-top: 17px; }}
+@media all and (max-width:920px)  {.nav-prev, .nav-next { height: 54px; padding-top: 16px; }}
+@media all and (max-width:880px)  {.nav-prev, .nav-next { height: 54px; padding-top: 16px; }}
+@media all and (max-width:840px)  {.nav-prev, .nav-next { height: 51px; padding-top: 15px; }}
+@media all and (max-width:800px)  {.nav-prev, .nav-next { height: 50px; padding-top: 15px; }}
+@media all and (max-width:760px)  {.nav-prev, .nav-next { height: 47px; padding-top: 14px; }}
+@media all and (max-width:720px)  {.nav-prev, .nav-next { height: 44px; padding-top: 13px; }}
+@media all and (max-width:680px)  {.nav-prev, .nav-next { height: 41px; padding-top: 12px; }}
+@media all and (max-width:640px){
+    .top-nav-text { display: none; }        /* hide text in navigation bar */
+    .nav-prev,
+    .nav-next {
+        height: 40px;                       /* fix height and font-size */
+        padding-top: 6px;
+        font-size: 24px;
+    }
+    .fixed-nav .nav-next,                 /* in fixed-nav make all button widths the same */
+    .fixed-nav .nav-prev { width: 16.66%; }
+}
+
+/* ****************************************************************************
+   SIDE TABLE OF CONTENTS
+   ****************************************************************************
+   A new pop-out table of contents has been added to a fixed position in the
+   left side bar:
+
+   +-----+    On mouse hover, the box expands to give a full list of the
+   |  C  |    table of contents for the page (it list only the chapter
+   |     |    level entries), these contents are the same for all SMDS
+   +-----+    Pages.
+
+   The side TOC contains 12 dynamic navigation links, and abstract section plus
+   the sections 1 to 11. The links are shown in grey, with the current section
+   (the one at the top of the view port) in blue. This is done ny dynamically
+   applying the .toc-active class to the specific TOC entry (done with
+   JavaScript).
+
+   The side TOC is held in a div with class .side-toc, this establishes a
+   fixed position div 30% of the way down the page at the left edge of the
+   body area. It has a high z-index to ensure it is above all other objects.
+
+   The .side-toc-box is, in the un-hovered state a box with rounded corners,
+   a faint border and the letter C in the top middle. If the mouse hovers
+   over the box it expands to a minimum height of 8 rem and a width that
+   fits the content of the box (the links, these are unordered lists with
+   either the class .side-toc-home or side-toc-lev), the original C becomes
+   the word Contents.
+
+   There are 12 standard links on the page (for the abstract section and each
+   of the remaining sections 1-11), these all have the classes .side-toc-lev.
+   These .sid-toc-lev classes are the ones that can have the .toc-active class
+   applied to force a colour change when the associated section is at the top
+   of the view port.
+
+   There are two other links with the class .side-toc.home, the first
+   navigates to the index.html page, the second to the top of the current
+   web page. These two links are not dynamically coloured.
+
+   The chapter number, section number and  title have the classes
+   .side-toc-lev1-chap, .side-toc-lev1-sec and .side-toc-lev1-text
+   respectively, these separate the chapter number, section number and title,
+   these oprate in a similar way to the normal toc links.
+   ************************************************************************* */
 
 .side-toc {
     z-index: 9999;
@@ -670,18 +1000,153 @@ Date          Issue        Author         Reason for Modification
 
 
 
+
 /* ****************************************************************************
-   ADDITIONAL INLINE TEXT STYLES
+   NORMAL TABLE OF CONTENTS - STYLE OVERLOADING
+   ****************************************************************************
+   The normal table of contents has three level of entry, each level having a
+   slightly different appearance in the TOC:
+
+   1     Level 1 heading (bold font)
+         1.1     Level 2 heading (roman font)
+         1.1.1   Level 3 heading (smaller roman font)
+
+   The normal TOC typically only has one level 1 entry (one chapter per page),
+   the PAL documention has multiple chapters on the same web page and has an
+   additional level:
+
+   BLOCK Level 1 heading (bold font)
+         1.      Level 2 Chapter heading
+         1.1     Level 3 Section (roman font)
+         1.1.1   Level 4 Sub-section (smaller roman font)
+
+   The TOC also has a toc-overline to separate it from the title area
    ************************************************************************* */
-.abs {                                     /* TEXT STYLE - code fragment */
+
+
+.toc-overline {                                 /* container for the TOC */
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    border-top: 1px solid #CCCCCC;
+}
+
+.toc-lev1-num {                             /* container for TOC level 1 number */
+    display: inline-block;
+    font-family: "conc-c4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    vertical-align: top;
+    width: 15%;
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+.toc-lev1-text {                            /* container for TOC level 1 text */
+    display: inline-block;
+    font-family: "conc-c4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    width: 80%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.toc-lev2-num {                             /* container for TOC level 2 number */
+    display: inline-block;
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.75rem;    vertical-align: top;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+}
+.toc-lev2-text {                            /* container for TOC level 2 text */
+    display: inline-block;
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.75rem;
+    width: 70%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+}
+
+.toc-lev3-num {                             /* container for TOC level 3 number */
+    display: inline-block;
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.75rem;    vertical-align: top;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+}
+.toc-lev3-text {                            /* container for TOC level 3 text */
+    display: inline-block;
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.75rem;
+    width: 70%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+}
+
+.toc-lev4-num {                             /* container for TOC level 4 number */
+    display: inline-block;
+    font-size: 0.7rem;
+    vertical-align: top;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+.toc-lev4-text {                            /* container for TOC level 4 text */
+    display: inline-block;
+    font-size: 0.7rem;
+    width: 70%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+
+
+/* ****************************************************************************
+   ADDITIONAL INLINE TEXT STYLES AND STYLE OVERLOADING
+   ************************************************************************* */
+.abs {                                      /* TEXT STYLE - absolute address */
     font-family: "trip-t4-r";
     font-size: 0.95em;
     color: #009999;
 }
-.block {                                     /* TEXT STYLE - code fragment */
+.signal {                                   /* TEXT STYLE - aabsolute address */
+    font-family: "trip-t4-b";
+    font-size: 0.95em;
+    color: #4F81BD;
+}
+.block {                                     /* TEXT STYLE - system block */
     font-family: "conc-c4-r";
     font-size: 0.95em;
     color: #009999;
 }
 
-.end-space {margin-top: 10rem}
+.end-space {margin-top: 10rem}              /* SPACING - large end space */
+
+.fig-space {margin-top: 3rem}              /* SPACING - large end space */
+
+footer {min-height: 4rem;}                  /* add additional space to bottom of footer */
+
+
+
+h5 {
+    font-family: 'conc-c2-r';
+    color: #aaa;
+    font-weight:normal;
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 220%;
+    margin-top: 0.5rem;
+}

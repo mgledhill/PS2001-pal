@@ -734,29 +734,23 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp">Abstract table (for PAL documents):</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - ABSTRACT TABLE (based on  en passant table)
+      TABLE - ABSTRACT TABLE
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-incid" style="width: 100%;">
-<!-- Data row -->       <tr class="in-no-border">
-                            <td class="table-left">
-                                <p class="hyp">This block is part of the Practical Series Automation Library (PAL); a library of software modules and templates that have been made available for the Siemens Simatic S7-1500 range of controllers. It is fully deployable software that is suitable for the control of most industrial process applications. </p>
+                    <table class="table-abs">
+<!-- Data row -->       <tr>
+                            <td>
 
                                 <p class="hyp">All the blocks within the PAL conform to the PAL style guide. This block (FC&nbsp;00001) is a template module that holds common arrangements for various aspects of the block notation and documentation styles.</p>
 
                                 <p class="hyp">It sets out the basic approach to documenting a block and includes:</p>
 
                                 <ul class="list-no-num">
-                                    <li><p><span class="sans">Block title and a standard PAL block header</span></p></li>
-                                    <li><p><span class="sans">Example block descriptions and styling information</span></p></li>
-                                    <li><p><span class="sans">Revision and modification history examples</span></p></li>
-                                    <li><p><span class="sans">Typical title, subtitle and text conventions for the PAList</span></p></li>
-                                    <li><p><span class="sans">Examples usage of figures and equations</span></p></li>
-                                    <li><p><span class="sans">A list of common symbols and spacing arrangements</span></p></li>
+                                    <li><p><span class="sans">Generates global logic signals (TRUE and FALSE)</span></p></li>
+                                    <li><p><span class="sans">Generates the following scan synchronised timing pulses:<br>  50ms, 100ms, 200ms, 500ms, 1s and 2s</span></p></li>
                                 </ul>
 
-                                <p class="hyp">The PAL is configured and deployed using the Siemens Simatic TIA Portal programming environment.</p>
+                                <p class="hyp">The block requires that the controller clock memory function is enabled.</p>
 
-                                <p class="hyp">The Practical Series Automation Library is freely available under the MIT Open Source licence.</p>
                             </td>
                         </tr>
 
@@ -865,6 +859,250 @@ Date          Issue        Author         Reason for Modification
                         </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p> <br class="toc-pad"></p>
+                    <p class="hyp">Tag table (for PAL documents):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - TAG TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-tag" id="js--pal-tag">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 27%">Name</th>
+                            <th class="table-cent" style="width: 8%">Type</th>
+                            <th class="table-cent" style="width: 12%">Address</th>
+                            <th class="table-left" style="width: 53%">Description</th>
+
+                        </tr>
+<!-- Data row -->       <tr class="no-border table-blu">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_SysMem01</td>
+                            <td class="table-cent code">Byte</td>
+                            <td class="table-cent abs">%MB0</td>
+                            <td>System memory byte 01&nbsp;&mdash;&nbsp;Logic and timing pulses</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_False</td>
+                            <td class="table-cent code">Bool</td>
+                            <td class="table-cent abs">%M0.0</td>
+                            <td class="table-left">System Logic Bit&nbsp;&mdash;&nbsp;Always FALSE</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_True</td>
+                            <td class="table-cent code">Bool</td>
+                            <td class="table-cent abs">%M0.1</td>
+                            <td class="table-left">System Logic Bit&nbsp;&mdash;&nbsp;Always TRUE</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_50ms</td>
+                            <td class="table-cent code">Bool</td>
+                            <td class="table-cent abs">%M0.2</td>
+                            <td class="table-left">System Timing&nbsp;&mdash;&nbsp;50&nbsp;ms Pulse Scan synchronised</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_100ms</td>
+                            <td class="table-cent code">Bool</td>
+                            <td class="table-cent abs">%M0.3</td>
+                            <td class="table-left">System Timing&nbsp;&mdash;&nbsp;100&nbsp;ms Pulse Scan synchronised</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_200ms</td>
+                            <td class="table-cent code">Bool</td>
+                            <td class="table-cent abs">%M0.4</td>
+                            <td class="table-left">System Timing&nbsp;&mdash;&nbsp;200&nbsp;ms Pulse Scan synchronised</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_500ms</td>
+                            <td class="table-cent code">Bool</td>
+                            <td class="table-cent abs">%M0.5</td>
+                            <td class="table-left">System Timing&nbsp;&mdash;&nbsp;500&nbsp;ms Pulse Scan synchronised</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_1s</td>
+                            <td class="table-cent code">Bool</td>
+                            <td class="table-cent abs">%M0.6</td>
+                            <td class="table-left">System Timing&nbsp;&mdash;&nbsp;1&nbsp;s Pulse Scan synchronised</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">_2s</td>
+                            <td class="table-cent code">Bool</td>
+                            <td class="table-cent abs">%M0.7</td>
+                            <td class="table-left">System Timing&nbsp;&mdash;&nbsp;2&nbsp;s Pulse Scan synchronised</td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="4" class="table-caption">Table 3.1 &emsp; PAL system bit memory usage (PAL_SystemTags table)</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Parameter table (for PAL documents):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - PARAMETER (based on table-tag)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-tag" id="js--pal-param">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th style="width: 27%">Param</th>
+                            <th style="width: 53%">Function</th>
+                            <th class="table-cent" style="width: 12%">Type</th>
+                            <th class="table-cent" style="width: 8%">In/Out</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="menu">CLOCK_MEM</td>
+                            <td>The clock memory byte (within the PAL this is always <span class="abs">MB10</span>)</td>
+                            <td class="table-cent code">Byte</td>
+                            <td class="table-cent">In</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="menu">SYSTEM_DATA</td>
+                            <td>The system data storage structure interface, holds the cycle &amp; RTC data</td>
+                            <td class="table-cent code">UT21000</td>
+                            <td class="table-cent">InOut</td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="4" class="table-caption">Table 4.1 &emsp; Block parameters</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Data structure list (for PAL documents):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STRUCTURE LIST  (based on table-tag)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-tag" id="js--pal-list">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th style="width: 50%">Data Structure</th>
+                            <th style="width: 50%">Description</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="struc-name"><span class="code">UT21000_Dy_SysGlobalData</span></td>
+                            <td>System data storage structure</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="struc-name"><span class="code">UT21000_Dy_SysGlobalData</span></td>
+                            <td>System data storage structure</td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="4" class="table-caption">Table 5.1 &emsp; Data structure list</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Data structure table (for PAL documents):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - DATA STRUCTURE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-struc" id="js--pal-struc">
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <td class="struc-title">Data Structure</td>
+                            <td colspan="2" class="struc-name">UT21000_Dy_SysGlobalData</td>
+                        </tr>
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th style="width: 30%">Signal</th>
+                            <th style="width: 10%">Type</th>
+                            <th style="width: 60%">Description</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">CycTime_Prev</td>
+                            <td class="code">Real</td>
+                            <td>Previous cycle time (ms)</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">CycTime_Max</td>
+                            <td class="code">Real</td>
+                            <td>Maximum cycle time&nbsp;-&nbsp;since start-up (ms)</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">CycTime_Min</td>
+                            <td class="code">Real</td>
+                            <td>Minimum cycle time&nbsp;-&nbsp;since start-up (ms)</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">Cyc_Counter</td>
+                            <td class="code">UDint</td>
+                            <td>Cycle rolling counter&nbsp;-&nbsp;incremented by 1 each scan</td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                        <td colspan="3" class="table-caption">Table 5.2 &emsp; Data structure: <span class="code">UT21000_Dy_SysGlobalData</span></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Local and Constant data table (for PAL documents):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - LOCAL DATA  (based on table-tag)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-tag" id="pal-loc">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th style="width: 25%">Signal</th>
+                            <th style="width: 55%">Function</th>
+                            <th style="width: 20%">Type</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">SI_ProgramCycle</td>
+                            <td>System data structure holding the data returned from the <span class="block">RD_SINFO</span> system function (provides first cycle data)</td>
+                            <td class="code">SI_ProgramCycle</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">SI_StartUp</td>
+                            <td class="table-left">System data structure holding the data returned from the <span class="block">RD_SINFO</span> system function</td>
+                            <td class="code">SI_StartUp</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">wrkInt</td>
+                            <td class="table-left">A working storage area (integer)</td>
+                            <td class="code">Int</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading" style="height: 2em"></td>
+                            <td class="signal">wrkDTL</td>
+                            <td class="table-left">A working storage area (DateTime long)</td>
+                            <td class="code">DTL</td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 6.1 &emsp; Temporary (local) data/constants </td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
 
                     <p> <br class="toc-pad"></p>
                     <p class="hyp">Basic footnote<sup>&dagger;1</sup>:</p>

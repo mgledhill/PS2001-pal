@@ -1,16 +1,14 @@
-
-
-/* PRACTICALSERIES (c) 2017
+/* PRACTICALSERIES (c) 2016
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS        99-00-PRETTIFYLINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS                 98-00-CODE.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 -------------------------------------------------------------------------------
 DETAILS
@@ -32,13 +30,25 @@ of lines to green (indicating the code has changed).
 
 2. LINE INDENTATION ON LINE WRAP
 Changes how a line is indeneted when it wraps around in the code fragment
-display
+display.
 
+Common indent points:
 
-3.CSS CLASS CHANGES
-Code fragments showning CSS do not display in the correct colours, the
-.pln and .lit classes are over-riddent to give more accurate colouring
+    Indent 1:   1.46rem
+    Indent 2:   2.92rem
+    Indent 3:   4.38rem
+    Indent 4:   5.85rem
+    Indent 5:   7.33rem
+    Indent 6:   8.79rem
 
+Example colouring and padding:
+
+#js--c98-01 li:nth-child(2) { background: #EAF1DD }
+#js--c98-01 li:nth-child(n+5):nth-child(-n+6) { background: #EAF1DD }
+#js--c98-02 li:nth-child(1) {padding-left: 4.38rem;}
+Blue:  #DBE5F1
+green: #EBF1DD
+Red:   #F2DCDB
 -------------------------------------------------------------------------------
 MODIFICATION HISTORY:
 
@@ -46,28 +56,25 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-26 Sep 2018   00.01        M. Gledhill    Created
+09 May 2019   D03          M. Gledhill    Development - based on PS1001 R01
+
+27 Mar 2019   D00          M. Gledhill    page created
 ---------------------------------------------------------------------------- */
 
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-#rev-lines:after { content: "D00.01"; }
-
-
-
-
-/* ****************************************************************************
-   CODE FRAGMENT c0301 - FORMATTING
-   ************************************************************************* */
-#js--c0301 .pln, .lit, .pun, .str { color: #446FBD;}
-#js--c0301 .com { color: #008000;}
-/* ************************************************************************* */
+#rev-lines:after { content: "D03"; }
 
 
 /* ****************************************************************************
-   CODE FRAGMENT c0302 - FORMATTING
-   ************************************************************************* */
-#js--c0302 .pln, .lit, .pun, .str { color: #446FBD;}
-#js--c0302 .com { color: #008000;}
-/* ************************************************************************* */
+   Table alternate line colouring
+   **************************************************************************** */
+#js--t03-01 tr:nth-child(2) { background: #DBE5F1 }
+#js--t03-01 tr:nth-child(11) { background: #DBE5F1 }
+#js--t03-01 tr:nth-child(20) { background: #DBE5F1 }
+
+#js--t05-02 tr:nth-child(n+3):nth-child(even):nth-child(-n+15) { background: #DBE5F1 }
+#js--t09-02 tr:nth-child(n+3):nth-child(even):nth-child(-n+7) { background: #DBE5F1 }
+#js--t09-03 tr:nth-child(n+3):nth-child(even):nth-child(-n+7) { background: #DBE5F1 }
+
