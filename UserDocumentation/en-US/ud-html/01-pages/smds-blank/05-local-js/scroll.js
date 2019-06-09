@@ -258,6 +258,10 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--f03-03').offset().top -80}, 1000);
     });
 
+    $('.js--sc-f03-04').click(function () {
+       $('html, body').animate({scrollTop: $('#js--f03-04').offset().top -80}, 1000);
+    });
+
     $('.js--sc-f03-05').click(function () {
        $('html, body').animate({scrollTop: $('#js--f03-05').offset().top -80}, 1000);
     });

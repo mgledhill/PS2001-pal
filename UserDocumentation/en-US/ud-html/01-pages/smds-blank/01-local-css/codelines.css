@@ -70,11 +70,13 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    Table alternate line colouring
    **************************************************************************** */
-#js--t03-01 tr:nth-child(2) { background: #DBE5F1 }
-#js--t03-01 tr:nth-child(11) { background: #DBE5F1 }
-#js--t03-01 tr:nth-child(20) { background: #DBE5F1 }
+#js--t03-01 tr:nth-child(2)                                    { background: #DBE5F1 }
+#js--t03-01 tr:nth-child(11)                                   { background: #DBE5F1 }
+#js--t03-01 tr:nth-child(20)                                   { background: #DBE5F1 }
 
 #js--t05-02 tr:nth-child(n+3):nth-child(even):nth-child(-n+15) { background: #DBE5F1 }
-#js--t09-02 tr:nth-child(n+3):nth-child(even):nth-child(-n+7) { background: #DBE5F1 }
-#js--t09-03 tr:nth-child(n+3):nth-child(even):nth-child(-n+7) { background: #DBE5F1 }
+#js--t06-01 tr:nth-child(n+3):nth-child(odd):nth-child(-n+5)   { background: #DBE5F1 }
+#js--t09-01 tr:nth-child(3)                                    { background: #DBE5F1 }
+#js--t09-02 tr:nth-child(n+3):nth-child(even):nth-child(-n+7)  { background: #DBE5F1 }
+#js--t09-03 tr:nth-child(n+3):nth-child(even):nth-child(-n+7)  { background: #DBE5F1 }
 
