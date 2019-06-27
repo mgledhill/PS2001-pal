@@ -875,20 +875,18 @@ Date          Issue        Author         Reason for Modification
 .side-toc {
     z-index: 9999;
     top:30%;
-    max-width: 1276px;
     position:fixed;
 }
 .side-toc-box {
-    font-family: "conc-c4-r";
-    color: #cccccc;
-    overflow: hidden;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    background-color: #fff;
-    border: 1px solid #cccccc;
-    border-radius: 0.5rem;
     height: 2rem;
     width: 2rem;
+    font-family: "conc-c4-r";
+    color: #ccc;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 }
 .side-toc-head {
     text-align: center;
@@ -897,12 +895,10 @@ Date          Issue        Author         Reason for Modification
 
 .side-toc-box:hover {
     height: auto;
-    min-height: 8rem;
     width: auto;
+    min-height: 8rem;
     color: #686868;
-    border: 1px solid #cccccc;
     background-color: #f8f8f8;
-    font-family: "conc-c4-r";
     font-size: 0.8rem;
 }
 .side-toc-box:hover .side-toc-head:after {
@@ -926,6 +922,9 @@ Date          Issue        Author         Reason for Modification
 .side-toc-line li a:hover,
 .side-toc-line li a:active {
     text-decoration: none;
+}
+.side-toc:hover .side-toc-line {
+    display: inline-block;
 }
 
 .side-toc-lev:link,                              /* format the link hover background */
@@ -969,9 +968,6 @@ Date          Issue        Author         Reason for Modification
     padding-right: 0.2rem;
     margin-top: 0.2rem;
     margin-bottom: 0.1rem;
-}
-.side-toc:hover .side-toc-line {
-    display: inline-block;
 }
 
 .toc-active {
